@@ -1,0 +1,83 @@
+{
+  "displayName": "Categories",
+  "maxPageSize": 50,
+  "allowedOperations": [
+    "get",
+    "find",
+    "count"
+  ],
+  "id": "Blog/Categories",
+  "isDeleted": false,
+  "ownerAppId": "14bcded7-0066-7c35-14d7-466cb3f09103",
+  "displayNamespace": null,
+  "fields": {
+    "postCount": {
+      "displayName": "Post Count",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "lt",
+        "lte",
+        "gt",
+        "gte"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 2
+    },
+    "posts": {
+      "displayName": "Posts",
+      "sortable": false,
+      "referencedCollection": "Blog/Posts",
+      "referencingDisplayName": "Blog/Posts",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "categories",
+      "type": "multi-reference",
+      "index": 3
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "hasSome"
+      ],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 0
+    },
+    "label": {
+      "displayName": "Label",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "contains",
+        "urlized",
+        "startsWith",
+        "hasSome"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 1
+    },
+    "categoryPageUrl": {
+      "displayName": "Category Page URL",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "url",
+      "index": 4
+    }
+  },
+  "displayField": "label",
+  "storage": "driver",
+  "namespace": "Blog"
+}

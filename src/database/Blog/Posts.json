@@ -1,0 +1,240 @@
+{
+  "displayName": "Posts",
+  "maxPageSize": 50,
+  "allowedOperations": [
+    "get",
+    "find",
+    "count"
+  ],
+  "id": "Blog/Posts",
+  "isDeleted": false,
+  "ownerAppId": "14bcded7-0066-7c35-14d7-466cb3f09103",
+  "displayNamespace": null,
+  "fields": {
+    "viewCount": {
+      "displayName": "View Count",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "lt",
+        "lte",
+        "gt",
+        "gte"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 8
+    },
+    "excerpt": {
+      "displayName": "Excerpt",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 6
+    },
+    "timeToRead": {
+      "displayName": "Time To Read",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 16
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "hasSome"
+      ],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 0
+    },
+    "featured": {
+      "displayName": "Featured",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "ne"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 11
+    },
+    "coverImage": {
+      "displayName": "Cover Image",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "image",
+      "index": 3
+    },
+    "plainContent": {
+      "displayName": "Plain Content",
+      "sortable": false,
+      "queryOperators": [
+        "contains",
+        "startsWith",
+        "hasSome",
+        "hasAll"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "commentCount": {
+      "displayName": "Comment Count",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "lt",
+        "lte",
+        "gt",
+        "gte"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 10
+    },
+    "publishedDate": {
+      "displayName": "Published Date",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "lt",
+        "lte",
+        "gt",
+        "gte"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 2
+    },
+    "pinned": {
+      "displayName": "Pinned",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "ne"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 12
+    },
+    "categories": {
+      "displayName": "Categories",
+      "sortable": false,
+      "referencedCollection": "Blog/Categories",
+      "referencingDisplayName": "Blog/Categories",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "posts",
+      "type": "multi-reference",
+      "index": 4
+    },
+    "postPageUrl": {
+      "displayName": "Post Page URL",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "url",
+      "index": 15
+    },
+    "coverImageDisplayed": {
+      "displayName": "Cover Image Displayed",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "ne"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 14
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "contains",
+        "urlized",
+        "startsWith",
+        "hasSome"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 1
+    },
+    "lastPublishedDate": {
+      "displayName": "Last Published Date",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "lt",
+        "lte",
+        "gt",
+        "gte"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 13
+    },
+    "hashtags": {
+      "displayName": "Hashtags",
+      "sortable": false,
+      "queryOperators": [
+        "hasSome",
+        "hasAll"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "array<string>",
+      "index": 7
+    },
+    "likeCount": {
+      "displayName": "Like Count",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "ne",
+        "lt",
+        "lte",
+        "gt",
+        "gte"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 9
+    }
+  },
+  "displayField": "title",
+  "storage": "driver",
+  "defaultSort": {
+    "fieldName": "publishedDate",
+    "direction": "desc"
+  },
+  "namespace": "Blog"
+}
