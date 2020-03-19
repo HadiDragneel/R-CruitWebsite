@@ -17,6 +17,6 @@
     1. Fetch 
     2. Rebase on master
     3. Push to your remote branch
-3. If you are done with your feature make a pull request
+3. If you are done with your feature or fix make a pull request
 4. After your pull request has been approved by at least 2 people, you may merge
 
