@@ -9,6 +9,7 @@
 
 # Rules
 * Never push directly to the master branch
+* Never press on the push button in the local editor
 
 # How to create a branch
 1. Create a branch from the master branch e.g: feature/<feature-name> or fix/<fix-name>
@@ -18,3 +19,4 @@
     3. Push to your remote branch
 3. If you are done with your feature make a pull request
 4. After your pull request has been approved by at least 2 people, you may merge
+
