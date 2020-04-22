@@ -1,11 +1,16 @@
 type PageElementsMap = {
   "#page1": $w.Page;
+  "#input1": $w.TextInput;
+  "#input2": $w.TextInput;
+  "#input3": $w.TextInput;
+  "#text72": $w.Text;
+  "#dataset1": $w.dataset;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
-  "#verticalMenu1": $w.VerticalMenu;
+  "#verticalMenu1": $w.Menu;
   "#profile1": $w.IFrame;
   "#group1": $w.Box;
   "#text12": $w.Text;
