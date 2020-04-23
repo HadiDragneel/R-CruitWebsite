@@ -2,11 +2,9 @@ type PageElementsMap = {
   "#page1": $w.Page;
   "#input1": $w.TextInput;
   "#input2": $w.TextInput;
-  "#input3": $w.TextInput;
   "#dataset1": $w.dataset;
   "#button1": $w.Button;
   "#text72": $w.Text;
-  "#text73": $w.Text;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;
