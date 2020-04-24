@@ -28,6 +28,15 @@
       "type": "text",
       "index": 5
     },
+    "phoneNumber": {
+      "plugin": "dataBinding",
+      "displayName": "Phone Number",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    },
     "email": {
       "plugin": "dataBinding",
       "displayName": "Email",
@@ -68,6 +77,24 @@
       "systemField": true,
       "type": "datetime",
       "index": 4
+    },
+    "qualifications": {
+      "plugin": "dataBinding",
+      "displayName": "Qualifications",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    },
+    "address": {
+      "plugin": "dataBinding",
+      "displayName": "Address",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
     },
     "title": {
       "displayName": "Title",

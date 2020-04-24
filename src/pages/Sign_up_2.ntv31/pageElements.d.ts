@@ -2,8 +2,12 @@ type PageElementsMap = {
   "#page1": $w.Page;
   "#input1": $w.TextInput;
   "#input2": $w.TextInput;
-  "#input3": $w.TextInput;
+  "#input4": $w.TextInput;
   "#dataset1": $w.dataset;
+  "#input5": $w.TextInput;
+  "#input3": $w.TextInput;
+  "#dropdown1": $w.Dropdown;
+  "#captcha1": $w.Captcha;
   "#button1": $w.Button;
   "#text74": $w.Text;
   "#text75": $w.Text;
