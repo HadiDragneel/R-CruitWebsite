@@ -40,8 +40,8 @@ type PageElementsMap = {
   "#footer1": $w.Footer;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
-  "#verticalMenu1": $w.VerticalMenu;
   "#profile1": $w.IFrame;
+  "#verticalMenu1": $w.Menu;
   "#group1": $w.Box;
   "#text12": $w.Text;
   "#text14": $w.Text;
