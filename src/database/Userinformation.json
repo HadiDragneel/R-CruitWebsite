@@ -70,6 +70,24 @@
       "type": "datetime",
       "index": 3
     },
+    "hoursPerWeek": {
+      "plugin": "dataBinding",
+      "displayName": "Hours per week",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 11
+    },
+    "howLong": {
+      "plugin": "dataBinding",
+      "displayName": "How long",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 12
+    },
     "_updatedDate": {
       "displayName": "Updated Date",
       "sortable": true,
