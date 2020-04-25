@@ -1,6 +1,20 @@
 type PageElementsMap = {
   "#page1": $w.Page;
-  "#formBuilder1": $w.IFrame;
+  "#text72": $w.Text;
+  "#button1": $w.Button;
+  "#input1": $w.TextInput;
+  "#input2": $w.TextInput;
+  "#input11": $w.AddressInput;
+  "#input12": $w.DatePicker;
+  "#input3": $w.TextInput;
+  "#input4": $w.TextInput;
+  "#input5": $w.TextInput;
+  "#input6": $w.TextInput;
+  "#input7": $w.TextInput;
+  "#input13": $w.TextBox;
+  "#input8": $w.TextInput;
+  "#input9": $w.TextInput;
+  "#input10": $w.TextInput;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;
