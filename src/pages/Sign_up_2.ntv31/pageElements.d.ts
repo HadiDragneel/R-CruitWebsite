@@ -18,6 +18,8 @@ type PageElementsMap = {
   "#button1": $w.Button;
   "#text74": $w.Text;
   "#text75": $w.Text;
+  "#input23": $w.TextInput;
+  "#input24": $w.TextInput;
   "#input6": $w.TextInput;
   "#input8": $w.TextInput;
   "#input7": $w.TextInput;

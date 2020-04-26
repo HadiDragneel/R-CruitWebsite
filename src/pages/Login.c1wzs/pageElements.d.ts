@@ -4,7 +4,7 @@ type PageElementsMap = {
   "#input2": $w.TextInput;
   "#dataset1": $w.dataset;
   "#button1": $w.Button;
-  "#text72": $w.Text;
+  "#button2": $w.Button;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;

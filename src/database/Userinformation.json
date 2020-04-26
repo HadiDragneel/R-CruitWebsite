@@ -105,6 +105,24 @@
       "type": "text",
       "index": 10
     },
+    "languages": {
+      "plugin": "dataBinding",
+      "displayName": "Languages",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 13
+    },
+    "nationality": {
+      "plugin": "dataBinding",
+      "displayName": "Nationality",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 14
+    },
     "address": {
       "plugin": "dataBinding",
       "displayName": "Address",
