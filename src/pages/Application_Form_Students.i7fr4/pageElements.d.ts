@@ -15,6 +15,13 @@ type PageElementsMap = {
   "#input8": $w.TextInput;
   "#input9": $w.TextInput;
   "#input10": $w.TextInput;
+  "#repeater1": $w.Repeater;
+  "#button2": $w.Button;
+  "#container2": $w.Container;
+  "#line1": $w.HiddenCollapsedElement;
+  "#input14": $w.TextInput;
+  "#input15": $w.TextInput;
+  "#input16": $w.TextInput;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;
