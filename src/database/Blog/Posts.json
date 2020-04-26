@@ -1,5 +1,11 @@
 {
   "displayName": "Posts",
+  "permissions": {
+    "insert": "admin",
+    "update": "admin",
+    "remove": "admin",
+    "read": "anyone"
+  },
   "maxPageSize": 50,
   "allowedOperations": [
     "get",
@@ -25,7 +31,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "number",
-      "index": 8
+      "index": 7
     },
     "excerpt": {
       "displayName": "Excerpt",
@@ -34,7 +40,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 6
+      "index": 5
     },
     "timeToRead": {
       "displayName": "Time To Read",
@@ -43,7 +49,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "number",
-      "index": 16
+      "index": 15
     },
     "_id": {
       "displayName": "ID",
@@ -68,7 +74,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "boolean",
-      "index": 11
+      "index": 10
     },
     "coverImage": {
       "displayName": "Cover Image",
@@ -91,7 +97,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 5
+      "index": 4
     },
     "commentCount": {
       "displayName": "Comment Count",
@@ -107,7 +113,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "number",
-      "index": 10
+      "index": 9
     },
     "publishedDate": {
       "displayName": "Published Date",
@@ -135,7 +141,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "boolean",
-      "index": 12
+      "index": 11
     },
     "categories": {
       "displayName": "Categories",
@@ -146,7 +152,7 @@
       "systemField": false,
       "referencingFieldKey": "posts",
       "type": "multi-reference",
-      "index": 4
+      "index": 16
     },
     "postPageUrl": {
       "displayName": "Post Page URL",
@@ -155,7 +161,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "url",
-      "index": 15
+      "index": 14
     },
     "coverImageDisplayed": {
       "displayName": "Cover Image Displayed",
@@ -167,7 +173,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "boolean",
-      "index": 14
+      "index": 13
     },
     "title": {
       "displayName": "Title",
@@ -199,7 +205,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "datetime",
-      "index": 13
+      "index": 12
     },
     "hashtags": {
       "displayName": "Hashtags",
@@ -211,7 +217,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "array<string>",
-      "index": 7
+      "index": 6
     },
     "likeCount": {
       "displayName": "Like Count",
@@ -227,7 +233,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "number",
-      "index": 9
+      "index": 8
     }
   },
   "displayField": "title",
