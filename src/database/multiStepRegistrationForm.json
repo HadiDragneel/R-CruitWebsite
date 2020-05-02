@@ -1,5 +1,5 @@
 {
-  "displayName": "Multistep Vancancy",
+  "displayName": "Vancancy",
   "permissions": {
     "insert": "anyone",
     "update": "admin",
@@ -34,6 +34,20 @@
       "systemField": false,
       "type": "text",
       "index": 6
+    },
+    "link-vancancy-firstName": {
+      "displayName": "Vancancy (Company name)",
+      "type": "pagelink",
+      "calculator": {
+        "id": "FIELDS_PATTERN",
+        "config": {
+          "pattern": "/vancancy/{firstName}"
+        }
+      },
+      "plugin": "dataBinding",
+      "systemField": true,
+      "isDeleted": false,
+      "index": 25
     },
     "submissionTime": {
       "displayName": "Submission Time",
@@ -98,6 +112,20 @@
       "systemField": false,
       "type": "text",
       "index": 16
+    },
+    "link-vancancy-all": {
+      "displayName": "Vancancy (All)",
+      "type": "pagelink",
+      "calculator": {
+        "id": "FIELDS_PATTERN",
+        "config": {
+          "pattern": "/vancancy/"
+        }
+      },
+      "plugin": "dataBinding",
+      "systemField": true,
+      "isDeleted": false,
+      "index": 26
     },
     "_updatedDate": {
       "displayName": "Updated Date",
