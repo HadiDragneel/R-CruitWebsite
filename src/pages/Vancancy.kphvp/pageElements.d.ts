@@ -1,6 +1,17 @@
 type PageElementsMap = {
   "#page1": $w.Page;
-  "#post1": $w.BlogPostPage;
+  "#text72": $w.Text;
+  "#textBox1": $w.TextBox;
+  "#input1": $w.TextInput;
+  "#input2": $w.TextInput;
+  "#datePicker1": $w.DatePicker;
+  "#textBox2": $w.TextBox;
+  "#group2": $w.Box;
+  "#dataset1": $w.dataset;
+  "#button1": $w.Button;
+  "#text74": $w.Text;
+  "#input3": $w.TextInput;
+  "#input4": $w.TextInput;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;

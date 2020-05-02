@@ -1,0 +1,114 @@
+{
+  "displayName": "Vacancy",
+  "permissions": {
+    "insert": "anyone",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "Vacancy",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "description": {
+      "displayName": "Description",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 6
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "amountStudents": {
+      "displayName": "AmountStudents",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 7
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "durationStudents": {
+      "displayName": "DurationStudents",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 8
+    },
+    "qualifications": {
+      "displayName": "Qualifications",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "workHours": {
+      "displayName": "WorkHours",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 9
+    },
+    "comments": {
+      "displayName": "Comments",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}
