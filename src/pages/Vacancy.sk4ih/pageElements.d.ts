@@ -2,14 +2,8 @@ type PageElementsMap = {
   "#page1": $w.Page;
   "#statebox1": $w.MultiStateBox;
   "#stateboxFormState3": $w.State;
-  "#stateboxFormState2": $w.State;
   "#stateboxFormState1": $w.State;
   "#text74": $w.Text;
-  "#text73": $w.Text;
-  "#input6": $w.TextInput;
-  "#input1": $w.TextInput;
-  "#input8": $w.TextInput;
-  "#input9": $w.TextInput;
   "#text76": $w.Text;
   "#textBox2": $w.TextBox;
   "#textBox3": $w.TextBox;
@@ -17,9 +11,7 @@ type PageElementsMap = {
   "#button3": $w.Button;
   "#input11": $w.TextInput;
   "#input12": $w.TextInput;
-  "#textBox1": $w.TextBox;
-  "#button2": $w.Button;
-  "#button1": $w.Button;
+  "#textBox4": $w.TextBox;
   "#text77": $w.Text;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;

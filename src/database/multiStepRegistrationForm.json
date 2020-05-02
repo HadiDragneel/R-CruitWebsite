@@ -49,7 +49,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 18
+      "index": 17
     },
     "email": {
       "displayName": "Email",
@@ -57,7 +57,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 16
+      "index": 15
     },
     "timeField": {
       "displayName": "Choose a time",
@@ -65,7 +65,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "time",
-      "index": 21
+      "index": 19
     },
     "_id": {
       "displayName": "ID",
@@ -73,7 +73,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "text",
-      "index": 9
+      "index": 8
     },
     "_owner": {
       "displayName": "Owner",
@@ -81,7 +81,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "text",
-      "index": 10
+      "index": 9
     },
     "_createdDate": {
       "displayName": "Created Date",
@@ -89,7 +89,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "datetime",
-      "index": 11
+      "index": 10
     },
     "paragraphField2": {
       "displayName": "List of experience",
@@ -97,7 +97,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 17
+      "index": 16
     },
     "_updatedDate": {
       "displayName": "Updated Date",
@@ -105,7 +105,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "datetime",
-      "index": 12
+      "index": 11
     },
     "address2": {
       "displayName": "Address 2",
@@ -113,15 +113,15 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 14
+      "index": 13
     },
     "paragraphField": {
-      "displayName": "Further inquiries",
+      "displayName": "Any questions or comments",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 8
+      "index": 22
     },
     "company": {
       "displayName": "Company name 2",
@@ -129,7 +129,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 13
+      "index": 12
     },
     "numberField2": {
       "displayName": "How many students are needed",
@@ -153,7 +153,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 22
+      "index": 21
     },
     "firstName": {
       "displayName": "Company name",
@@ -162,6 +162,14 @@
       "systemField": false,
       "type": "text",
       "index": 2
+    },
+    "copyOfHowManyHoursPerWeek": {
+      "displayName": "copy of How many hours per week",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 23
     },
     "address": {
       "displayName": "Address",
@@ -179,13 +187,21 @@
       "type": "text",
       "index": 0
     },
+    "copyOfCopyOfHowManyHoursPerWeek": {
+      "displayName": "copy of copy of How many hours per week",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 24
+    },
     "numberField": {
       "displayName": "How many hours per week",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "number",
-      "index": 19
+      "index": 18
     },
     "singleSelectionField3": {
       "displayName": "Relevant sessions",
@@ -201,7 +217,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 15
+      "index": 14
     }
   },
   "displayField": "submissionTime",
