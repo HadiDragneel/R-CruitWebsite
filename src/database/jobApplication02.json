@@ -1,5 +1,5 @@
 {
-  "displayName": "Multistep Vancancy",
+  "displayName": "Job Application",
   "permissions": {
     "insert": "anyone",
     "update": "admin",
@@ -14,27 +14,11 @@
     "insert",
     "update"
   ],
-  "id": "multiStepRegistrationForm",
+  "id": "jobApplication02",
   "isDeleted": false,
   "ownerAppId": "14ce1214-b278-a7e4-1373-00cebd1bef7c",
   "displayNamespace": null,
   "fields": {
-    "birthday": {
-      "displayName": "Birthday",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 4
-    },
-    "singleSelectionField2": {
-      "displayName": "First time registering?",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 6
-    },
     "submissionTime": {
       "displayName": "Submission Time",
       "sortable": true,
@@ -43,29 +27,13 @@
       "type": "datetime",
       "index": 1
     },
-    "paragraphField3": {
-      "displayName": "Job description",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 18
-    },
     "email": {
       "displayName": "Email",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 16
-    },
-    "timeField": {
-      "displayName": "Choose a time",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "time",
-      "index": 21
+      "index": 4
     },
     "_id": {
       "displayName": "ID",
@@ -91,13 +59,13 @@
       "type": "datetime",
       "index": 11
     },
-    "paragraphField2": {
-      "displayName": "List of experience",
+    "resumeUrl": {
+      "displayName": "Resume URL",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
-      "type": "text",
-      "index": 17
+      "type": "url",
+      "index": 8
     },
     "_updatedDate": {
       "displayName": "Updated Date",
@@ -107,69 +75,29 @@
       "type": "datetime",
       "index": 12
     },
-    "address2": {
-      "displayName": "Address 2",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 14
-    },
-    "paragraphField": {
-      "displayName": "Further inquiries",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 8
-    },
-    "company": {
-      "displayName": "Company name 2",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 13
-    },
-    "numberField2": {
-      "displayName": "How many students are needed",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "number",
-      "index": 20
-    },
     "lastName": {
-      "displayName": "Address 2",
+      "displayName": "Last Name",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
       "index": 3
     },
-    "shortTextField": {
-      "displayName": "For how long are the students",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 22
-    },
     "firstName": {
-      "displayName": "Company name",
+      "displayName": "First Name",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
       "index": 2
     },
-    "address": {
-      "displayName": "Address",
+    "position": {
+      "displayName": "Dropdown Field",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 5
+      "index": 6
     },
     "title": {
       "displayName": "Title",
@@ -179,16 +107,8 @@
       "type": "text",
       "index": 0
     },
-    "numberField": {
-      "displayName": "How many hours per week",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "number",
-      "index": 19
-    },
-    "singleSelectionField3": {
-      "displayName": "Relevant sessions",
+    "startDate": {
+      "displayName": "Start Date",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
@@ -201,7 +121,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 15
+      "index": 5
     }
   },
   "displayField": "submissionTime",
