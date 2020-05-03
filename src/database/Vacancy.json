@@ -19,6 +19,15 @@
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
+    "requirementss": {
+      "plugin": "dataBinding",
+      "displayName": "Requirementss",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "url",
+      "index": 11
+    },
     "description": {
       "displayName": "Description",
       "sortable": true,
@@ -72,7 +81,7 @@
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
-      "type": "datetime",
+      "type": "text",
       "index": 8
     },
     "qualifications": {
