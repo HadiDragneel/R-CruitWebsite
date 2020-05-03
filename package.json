@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "corvid-cli": "^0.2.6",
-    "corvid-types": "^0.1.95"
+    "corvid-cli": "^0.2.9",
+    "corvid-types": "^0.1.96"
   }
 }
