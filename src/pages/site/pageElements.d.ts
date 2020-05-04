@@ -2,7 +2,6 @@ type PageElementsMap = {
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;
-  "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
   "#verticalMenu1": $w.Menu;
   "#profile1": $w.IFrame;
