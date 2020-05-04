@@ -1,14 +1,16 @@
 type PageElementsMap = {
   "#page1": $w.Page;
   "#text72": $w.Text;
-  "#button1": $w.Button;
-  "#input13": $w.TextBox;
-  "#input8": $w.TextInput;
-  "#repeater1": $w.Repeater;
-  "#button2": $w.Button;
   "#textBox1": $w.TextBox;
+  "#button2": $w.Button;
+  "#repeater1": $w.Repeater;
+  "#input8": $w.TextInput;
   "#input16": $w.TextInput;
   "#input17": $w.TextInput;
+  "#input13": $w.TextBox;
+  "#button1": $w.Button;
+  "#dataset1": $w.dataset;
+  "#text73": $w.Text;
   "#container2": $w.Container;
   "#line1": $w.HiddenCollapsedElement;
   "#input14": $w.TextInput;
