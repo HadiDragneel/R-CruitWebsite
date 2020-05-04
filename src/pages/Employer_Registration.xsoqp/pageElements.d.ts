@@ -3,17 +3,13 @@ type PageElementsMap = {
   "#text72": $w.Text;
   "#dataset1": $w.dataset;
   "#companyName": $w.TextInput;
-  "#postCode": $w.TextInput;
-  "#city": $w.TextInput;
-  "#street": $w.TextInput;
-  "#number": $w.TextInput;
-  "#extra": $w.TextInput;
   "#phoneNumber": $w.TextInput;
   "#email": $w.TextInput;
   "#password": $w.TextInput;
   "#submitButton": $w.Button;
   "#text73": $w.Text;
   "#text74": $w.Text;
+  "#addressInput1": $w.AddressInput;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;
