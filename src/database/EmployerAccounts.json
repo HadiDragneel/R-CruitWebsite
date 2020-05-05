@@ -51,6 +51,14 @@
       "type": "text",
       "index": 10
     },
+    "primaryTextField": {
+      "displayName": "PrimaryTextField",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 16
+    },
     "_id": {
       "displayName": "ID",
       "sortable": true,
@@ -148,7 +156,7 @@
       "index": 12
     }
   },
-  "displayField": "title",
+  "displayField": "primaryTextField",
   "storage": "docstore",
   "namespace": null
 }
