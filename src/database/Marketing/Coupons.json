@@ -1,5 +1,11 @@
 {
   "displayName": "Coupons",
+  "permissions": {
+    "insert": "admin",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
   "maxPageSize": 100,
   "allowedOperations": [
     "count",
