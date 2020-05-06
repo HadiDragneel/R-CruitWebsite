@@ -32,6 +32,7 @@ type PageElementsMap = {
   "#image8": $w.Image;
   "#text54": $w.Text;
   "#button8": $w.Button;
+  "#text72": $w.Text;
   "#text70": $w.Text;
   "#text69": $w.Text;
   "#text67": $w.Text;
