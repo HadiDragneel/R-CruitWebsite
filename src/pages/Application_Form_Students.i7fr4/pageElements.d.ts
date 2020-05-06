@@ -1,7 +1,6 @@
 type PageElementsMap = {
   "#page1": $w.Page;
   "#text72": $w.Text;
-  "#button1": $w.Button;
   "#input1": $w.TextInput;
   "#input2": $w.TextInput;
   "#input11": $w.AddressInput;
@@ -9,14 +8,18 @@ type PageElementsMap = {
   "#input3": $w.TextInput;
   "#input4": $w.TextInput;
   "#input5": $w.TextInput;
+  "#addWorkButton": $w.Button;
+  "#removeWorkButton": $w.Button;
+  "#repeater1": $w.Repeater;
   "#input6": $w.TextInput;
   "#input7": $w.TextInput;
   "#input13": $w.TextBox;
   "#input8": $w.TextInput;
   "#input9": $w.TextInput;
-  "#input10": $w.TextInput;
-  "#repeater1": $w.Repeater;
-  "#button2": $w.Button;
+  "#text73": $w.Text;
+  "#radioGroup1": $w.RadioButtonGroup;
+  "#captcha1": $w.Captcha;
+  "#submitButton": $w.Button;
   "#container2": $w.Container;
   "#line1": $w.HiddenCollapsedElement;
   "#input14": $w.TextInput;
