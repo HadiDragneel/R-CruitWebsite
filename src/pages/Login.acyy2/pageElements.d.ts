@@ -1,6 +1,9 @@
 type PageElementsMap = {
   "#page1": $w.Page;
-  "#formBuilder1": $w.IFrame;
+  "#input1": $w.TextInput;
+  "#input2": $w.TextInput;
+  "#button1": $w.Button;
+  "#button2": $w.Button;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;
