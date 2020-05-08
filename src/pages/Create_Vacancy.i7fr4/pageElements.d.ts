@@ -2,8 +2,8 @@ type PageElementsMap = {
   "#page1": $w.Page;
   "#text72": $w.Text;
   "#textBox1": $w.TextBox;
-  "#dataset1": $w.dataset;
   "#button2": $w.Button;
+  "#button3": $w.Button;
   "#repeater1": $w.Repeater;
   "#input8": $w.TextInput;
   "#input16": $w.TextInput;
