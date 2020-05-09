@@ -70,6 +70,15 @@
       "type": "datetime",
       "index": 3
     },
+    "Employers-1": {
+      "displayName": "Employer",
+      "sortable": false,
+      "referencedCollection": "Employers",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 13
+    },
     "_updatedDate": {
       "displayName": "Updated Date",
       "sortable": true,
@@ -98,12 +107,23 @@
       "index": 5
     },
     "title": {
-      "displayName": "Title",
+      "displayName": "Job Title",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
       "index": 0
+    },
+    "Employers-2": {
+      "displayName": "Employers-2",
+      "sortable": false,
+      "referencedCollection": "Employers",
+      "referencingDisplayName": "Vacancies",
+      "isDeleted": true,
+      "systemField": false,
+      "referencingFieldKey": "vacancies",
+      "type": "multi-reference",
+      "index": 14
     },
     "studentsTimeNeeded": {
       "displayName": "Students Time Needed",

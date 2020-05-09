@@ -1,5 +1,5 @@
 {
-  "displayName": "Employers",
+  "displayName": "CV's",
   "permissions": {
     "insert": "anyone",
     "update": "admin",
@@ -14,17 +14,17 @@
     "insert",
     "update"
   ],
-  "id": "Employers",
+  "id": "CVs",
   "isDeleted": false,
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
-    "phoneNumber": {
-      "displayName": "Phone Number",
+    "searchedForJob": {
+      "displayName": "Searched for Job",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
-      "type": "number",
+      "type": "text",
       "index": 8
     },
     "_id": {
@@ -51,13 +51,16 @@
       "type": "datetime",
       "index": 3
     },
-    "emailAddress": {
-      "displayName": "Email Address",
+    "studentExperiences": {
+      "displayName": "Student Experiences",
       "sortable": true,
+      "referencedCollection": "StudentExperiences",
+      "referencingDisplayName": "CVs-2",
       "isDeleted": false,
       "systemField": false,
-      "type": "text",
-      "index": 6
+      "referencingFieldKey": "CVs-2",
+      "type": "multi-reference",
+      "index": 11
     },
     "_updatedDate": {
       "displayName": "Updated Date",
@@ -67,20 +70,44 @@
       "type": "datetime",
       "index": 4
     },
-    "companyName": {
-      "displayName": "Company Name",
+    "timeInNl": {
+      "displayName": "Time in NL",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
       "index": 9
     },
-    "address": {
-      "displayName": "Address",
+    "motivation": {
+      "displayName": "Motivation",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
-      "type": "address",
+      "type": "text",
+      "index": 7
+    },
+    "heardAboutUs": {
+      "displayName": "Heard About Us",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    },
+    "desiredContract": {
+      "displayName": "Desired Contract",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 6
+    },
+    "weeklyHours": {
+      "displayName": "Weekly Hours",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
       "index": 5
     },
     "title": {
@@ -90,25 +117,6 @@
       "systemField": false,
       "type": "text",
       "index": 0
-    },
-    "vacancies": {
-      "displayName": "Vacancies",
-      "sortable": true,
-      "referencedCollection": "Vacancies",
-      "referencingDisplayName": "Employers-3",
-      "isDeleted": false,
-      "systemField": false,
-      "referencingFieldKey": "Employers-3",
-      "type": "multi-reference",
-      "index": 10
-    },
-    "password": {
-      "displayName": "Password",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 7
     }
   },
   "displayField": "title",

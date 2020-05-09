@@ -31,7 +31,7 @@
       "displayName": "Employer Reference",
       "sortable": true,
       "referencedCollection": "Employers",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "reference",
       "index": 5
@@ -77,7 +77,7 @@
       "index": 4
     },
     "Vacancies": {
-      "displayName": "Vacancy",
+      "displayName": "Vacancy Reference",
       "sortable": false,
       "referencedCollection": "Vacancies",
       "isDeleted": false,

@@ -1,5 +1,5 @@
 {
-  "displayName": "Employers",
+  "displayName": "Student Experiences",
   "permissions": {
     "insert": "anyone",
     "update": "admin",
@@ -14,18 +14,18 @@
     "insert",
     "update"
   ],
-  "id": "Employers",
+  "id": "StudentExperiences",
   "isDeleted": false,
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
-    "phoneNumber": {
-      "displayName": "Phone Number",
+    "studentExperience": {
+      "displayName": "Student Experience",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
-      "type": "number",
-      "index": 8
+      "type": "text",
+      "index": 7
     },
     "_id": {
       "displayName": "ID",
@@ -51,13 +51,13 @@
       "type": "datetime",
       "index": 3
     },
-    "emailAddress": {
-      "displayName": "Email Address",
+    "howLong": {
+      "displayName": "How Long",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 6
+      "index": 8
     },
     "_updatedDate": {
       "displayName": "Updated Date",
@@ -67,21 +67,16 @@
       "type": "datetime",
       "index": 4
     },
-    "companyName": {
-      "displayName": "Company Name",
-      "sortable": true,
-      "isDeleted": false,
+    "CVs-1": {
+      "displayName": "CVs-1",
+      "sortable": false,
+      "referencedCollection": "CVs",
+      "referencingDisplayName": "Student Experiences",
+      "isDeleted": true,
       "systemField": false,
-      "type": "text",
-      "index": 9
-    },
-    "address": {
-      "displayName": "Address",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "address",
-      "index": 5
+      "referencingFieldKey": "studentExperiences",
+      "type": "multi-reference",
+      "index": 6
     },
     "title": {
       "displayName": "Title",
@@ -91,24 +86,22 @@
       "type": "text",
       "index": 0
     },
-    "vacancies": {
-      "displayName": "Vacancies",
+    "sinceWhen": {
+      "displayName": "Since When",
       "sortable": true,
-      "referencedCollection": "Vacancies",
-      "referencingDisplayName": "Employers-3",
       "isDeleted": false,
       "systemField": false,
-      "referencingFieldKey": "Employers-3",
-      "type": "multi-reference",
-      "index": 10
+      "type": "datetime",
+      "index": 9
     },
-    "password": {
-      "displayName": "Password",
-      "sortable": true,
+    "CVs": {
+      "displayName": "CV",
+      "sortable": false,
+      "referencedCollection": "CVs",
       "isDeleted": false,
       "systemField": false,
-      "type": "text",
-      "index": 7
+      "type": "reference",
+      "index": 5
     }
   },
   "displayField": "title",
