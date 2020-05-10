@@ -112,7 +112,7 @@
       "sortable": false,
       "referencedCollection": "Employers",
       "referencingDisplayName": "Vacancies",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "vacancies",
       "type": "multi-reference",
