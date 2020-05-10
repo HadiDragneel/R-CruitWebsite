@@ -38,6 +38,17 @@
       "type": "number",
       "index": 8
     },
+    "Employers-3": {
+      "displayName": "Employers-3",
+      "sortable": false,
+      "referencedCollection": "Employers",
+      "referencingDisplayName": "Vacancies",
+      "isDeleted": true,
+      "systemField": false,
+      "referencingFieldKey": "vacancies",
+      "type": "multi-reference",
+      "index": 15
+    },
     "_id": {
       "displayName": "ID",
       "sortable": true,
@@ -74,10 +85,19 @@
       "displayName": "Employer",
       "sortable": false,
       "referencedCollection": "Employers",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "reference",
       "index": 13
+    },
+    "employer": {
+      "displayName": "Employer",
+      "sortable": true,
+      "referencedCollection": "Employers",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 16
     },
     "_updatedDate": {
       "displayName": "Updated Date",
@@ -86,6 +106,17 @@
       "systemField": true,
       "type": "datetime",
       "index": 4
+    },
+    "Employers-4": {
+      "displayName": "Employers-4",
+      "sortable": false,
+      "referencedCollection": "Employers",
+      "referencingDisplayName": "Vacancies",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "vacancies",
+      "type": "multi-reference",
+      "index": 17
     },
     "hoursAWeek": {
       "displayName": "Hours A Week",

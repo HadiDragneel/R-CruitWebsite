@@ -83,6 +83,15 @@
       "type": "datetime",
       "index": 4
     },
+    "cv": {
+      "displayName": "CV",
+      "sortable": true,
+      "referencedCollection": "CVs",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 15
+    },
     "lastName": {
       "displayName": "Last Name",
       "sortable": true,
@@ -103,7 +112,7 @@
       "displayName": "CV Reference",
       "sortable": true,
       "referencedCollection": "CVs",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "reference",
       "index": 14

@@ -95,10 +95,10 @@
       "displayName": "Vacancies",
       "sortable": true,
       "referencedCollection": "Vacancies",
-      "referencingDisplayName": "Employers-3",
+      "referencingDisplayName": "Employers-4",
       "isDeleted": false,
       "systemField": false,
-      "referencingFieldKey": "Employers-3",
+      "referencingFieldKey": "Employers-4",
       "type": "multi-reference",
       "index": 10
     },

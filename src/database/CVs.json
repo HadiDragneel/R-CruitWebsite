@@ -19,6 +19,15 @@
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
+    "student": {
+      "displayName": "Student",
+      "sortable": true,
+      "referencedCollection": "Students",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 12
+    },
     "searchedForJob": {
       "displayName": "Searched for Job",
       "sortable": true,
