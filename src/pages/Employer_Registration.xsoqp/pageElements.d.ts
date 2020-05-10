@@ -1,7 +1,6 @@
 type PageElementsMap = {
   "#page1": $w.Page;
   "#text72": $w.Text;
-  "#dataset1": $w.dataset;
   "#companyName": $w.TextInput;
   "#phoneNumber": $w.TextInput;
   "#email": $w.TextInput;
@@ -10,6 +9,7 @@ type PageElementsMap = {
   "#text73": $w.Text;
   "#text74": $w.Text;
   "#addressInput1": $w.AddressInput;
+  "#dataset1": $w.dataset;
   "#header1": $w.Header;
   "#container1": $w.HiddenCollapsedElement;
   "#footer1": $w.Footer;

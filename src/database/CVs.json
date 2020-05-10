@@ -1,0 +1,134 @@
+{
+  "displayName": "CV's",
+  "permissions": {
+    "insert": "anyone",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "CVs",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "student": {
+      "displayName": "Student",
+      "sortable": true,
+      "referencedCollection": "Students",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 12
+    },
+    "searchedForJob": {
+      "displayName": "Searched for Job",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "studentExperiences": {
+      "displayName": "Student Experiences",
+      "sortable": true,
+      "referencedCollection": "StudentExperiences",
+      "referencingDisplayName": "CVs-2",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "CVs-2",
+      "type": "multi-reference",
+      "index": 11
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "timeInNl": {
+      "displayName": "Time in NL",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    },
+    "motivation": {
+      "displayName": "Motivation",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "heardAboutUs": {
+      "displayName": "Heard About Us",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    },
+    "desiredContract": {
+      "displayName": "Desired Contract",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 6
+    },
+    "weeklyHours": {
+      "displayName": "Weekly Hours",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 5
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}
