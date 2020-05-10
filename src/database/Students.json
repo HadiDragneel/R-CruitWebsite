@@ -103,7 +103,7 @@
     "firstName": {
       "displayName": "First Name",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "text",
       "index": 7
@@ -134,7 +134,7 @@
       "index": 12
     },
     "title": {
-      "displayName": "Title",
+      "displayName": "First Name",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,

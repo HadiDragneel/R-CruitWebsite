@@ -70,7 +70,7 @@
     "companyName": {
       "displayName": "Company Name",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "text",
       "index": 9
@@ -84,7 +84,7 @@
       "index": 5
     },
     "title": {
-      "displayName": "Title",
+      "displayName": "Company Name",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
@@ -95,10 +95,10 @@
       "displayName": "Vacancies",
       "sortable": true,
       "referencedCollection": "Vacancies",
-      "referencingDisplayName": "Employers-4",
+      "referencingDisplayName": "Employers-5",
       "isDeleted": false,
       "systemField": false,
-      "referencingFieldKey": "Employers-4",
+      "referencingFieldKey": "Employers-5",
       "type": "multi-reference",
       "index": 10
     },
