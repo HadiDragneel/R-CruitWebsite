@@ -85,6 +85,17 @@
       "type": "reference",
       "index": 6
     },
+    "Vacancies-2": {
+      "displayName": "Vacancies-2",
+      "sortable": false,
+      "referencedCollection": "Vacancies",
+      "referencingDisplayName": "Job Qualifications",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "jobQualifications",
+      "type": "multi-reference",
+      "index": 10
+    },
     "title": {
       "displayName": "Title",
       "sortable": true,
