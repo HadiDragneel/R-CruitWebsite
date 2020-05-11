@@ -12,9 +12,14 @@ type PageElementsMap = {
   "#input16": $w.TextInput;
   "#input17": $w.TextInput;
   "#input13": $w.TextBox;
-  "#button1": $w.Button;
   "#text73": $w.Text;
   "#button3": $w.Button;
+  "#dataset1": $w.dataset;
+  "#text74": $w.Text;
+  "#container2": $w.Container;
+  "#line1": $w.HiddenCollapsedElement;
+  "#input14": $w.TextInput;
+  "#input15": $w.TextInput;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;

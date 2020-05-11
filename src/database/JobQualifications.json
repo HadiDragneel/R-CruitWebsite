@@ -1,0 +1,111 @@
+{
+  "displayName": "Job Qualifications",
+  "permissions": {
+    "insert": "anyone",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "JobQualifications",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "qualification": {
+      "displayName": "Qualification",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "employerReference": {
+      "displayName": "Employer Reference",
+      "sortable": true,
+      "referencedCollection": "Employers",
+      "isDeleted": true,
+      "systemField": false,
+      "type": "reference",
+      "index": 5
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "howLong": {
+      "displayName": "How long",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "Vacancies": {
+      "displayName": "Vacancy Reference",
+      "sortable": false,
+      "referencedCollection": "Vacancies",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 6
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "Vacancies-1": {
+      "displayName": "Vacancies-1",
+      "sortable": false,
+      "referencedCollection": "Vacancies",
+      "referencingDisplayName": "Job Qualifications",
+      "isDeleted": true,
+      "systemField": false,
+      "referencingFieldKey": "jobQualifications",
+      "type": "multi-reference",
+      "index": 9
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}
