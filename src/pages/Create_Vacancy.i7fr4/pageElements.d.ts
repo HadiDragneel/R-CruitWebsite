@@ -11,11 +11,12 @@ type PageElementsMap = {
   "#input8": $w.TextInput;
   "#input16": $w.TextInput;
   "#input17": $w.TextInput;
-  "#input13": $w.TextBox;
   "#text73": $w.Text;
   "#button3": $w.Button;
   "#text74": $w.Text;
   "#button4": $w.Button;
+  "#captcha1": $w.Captcha;
+  "#checkbox1": $w.Checkbox;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
