@@ -1,8 +1,6 @@
 type PageElementsMap = {
-  "#line1": $w.HiddenCollapsedElement;
-  "#input8": $w.TextInput;
-  "#input10": $w.TextInput;
-  "#input9": $w.TextInput;
+  "#page1": $w.Page;
+  "#text72": $w.Text;
   "#input1": $w.TextInput;
   "#input2": $w.TextInput;
   "#text76": $w.Text;
@@ -11,8 +9,14 @@ type PageElementsMap = {
   "#input5": $w.TextInput;
   "#input6": $w.TextInput;
   "#input7": $w.TextInput;
-  "#removeWorkButton": $w.Button;
   "#addWorkButton": $w.Button;
+  "#removeWorkButton": $w.Button;
+  "#repeater1": $w.Repeater;
+  "#container2": $w.Container;
+  "#input8": $w.TextInput;
+  "#input9": $w.TextInput;
+  "#input10": $w.TextInput;
+  "#line1": $w.HiddenCollapsedElement;
   "#input11": $w.TextInput;
   "#input12": $w.TextInput;
   "#input13": $w.TextBox;
@@ -23,24 +27,20 @@ type PageElementsMap = {
   "#captcha1": $w.Captcha;
   "#submitButton": $w.Button;
   "#vectorImage1": $w.VectorImage;
-  "#text72": $w.Text;
-  "#page1": $w.Page;
-  "#repeater1": $w.Repeater;
-  "#container2": $w.Container;
   "#header1": $w.Header;
   "#image2": $w.Image;
+  "#horizontalMenu1": $w.Menu;
   "#container1": $w.HiddenCollapsedElement;
   "#verticalMenu1": $w.Menu;
   "#profile1": $w.IFrame;
   "#footer1": $w.Footer;
+  "#group1": $w.Box;
   "#image4": $w.Image;
   "#text71": $w.Text;
+  "#text12": $w.Text;
   "#text14": $w.Text;
+  "#text46": $w.Text;
   "#socialBar1": $w.HiddenCollapsedElement;
   "#text15": $w.Text;
-  "#horizontalMenu1": $w.Menu;
-  "#text12": $w.Text;
-  "#text46": $w.Text;
   "#text48": $w.Text;
-  "#group1": $w.Box;
 }
