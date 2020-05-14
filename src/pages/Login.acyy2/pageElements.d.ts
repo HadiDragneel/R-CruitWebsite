@@ -3,8 +3,8 @@ type PageElementsMap = {
   "#input1": $w.TextInput;
   "#input2": $w.TextInput;
   "#forgotPasswordButton": $w.Button;
-  "#dataset1": $w.dataset;
   "#loginButton": $w.Button;
+  "#dataset1": $w.dataset;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
