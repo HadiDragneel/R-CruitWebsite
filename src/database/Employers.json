@@ -91,17 +91,6 @@
       "type": "text",
       "index": 0
     },
-    "vacancies": {
-      "displayName": "Vacancies",
-      "sortable": true,
-      "referencedCollection": "Vacancies",
-      "referencingDisplayName": "Employers-5",
-      "isDeleted": false,
-      "systemField": false,
-      "referencingFieldKey": "Employers-5",
-      "type": "multi-reference",
-      "index": 10
-    },
     "password": {
       "displayName": "Password",
       "sortable": true,
