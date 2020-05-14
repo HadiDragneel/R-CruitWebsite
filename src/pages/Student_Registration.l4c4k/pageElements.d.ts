@@ -3,6 +3,7 @@ type PageElementsMap = {
   "#text72": $w.Text;
   "#input1": $w.TextInput;
   "#input2": $w.TextInput;
+  "#text76": $w.Text;
   "#input3": $w.AddressInput;
   "#input4": $w.DatePicker;
   "#input5": $w.TextInput;
@@ -25,6 +26,7 @@ type PageElementsMap = {
   "#radioGroup1": $w.RadioButtonGroup;
   "#captcha1": $w.Captcha;
   "#submitButton": $w.Button;
+  "#vectorImage1": $w.VectorImage;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;

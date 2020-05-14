@@ -2,14 +2,15 @@ type PageElementsMap = {
   "#page1": $w.Page;
   "#text72": $w.Text;
   "#companyName": $w.TextInput;
+  "#addressInput1": $w.AddressInput;
   "#phoneNumber": $w.TextInput;
+  "#dataset1": $w.dataset;
   "#email": $w.TextInput;
   "#password": $w.TextInput;
+  "#captcha1": $w.Captcha;
   "#submitButton": $w.Button;
-  "#text73": $w.Text;
   "#text74": $w.Text;
-  "#addressInput1": $w.AddressInput;
-  "#dataset1": $w.dataset;
+  "#text73": $w.Text;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
