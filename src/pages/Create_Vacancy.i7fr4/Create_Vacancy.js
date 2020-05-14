@@ -23,24 +23,21 @@ let added = 0;
 
 
 $w.onReady(function (){
-    
+
+
+      
     $w("#repeater1").data = [];
  
       $w("#button2").onClick( (event) => {
         $w("#repeater1").data = exampleData.slice(0, ++added);
       } );
 
-    
-    
-    $w("#input1").onMouseIn(()=> //onMouseIn is the event handler.
-   // The callback function starts here.
+    $w("#button3").onClick( (event) =>
     {
-        console.log("hoverin over");
-        //$w("#button1").label = "Let's Go!";
-        //This is the code that runs when the event occurs.
-    }
-  // The callback function ends here.
-   );
+        if (added > 0) {
+            $w("#repeater1").data = exampleData.slice(0, --added);
+        }
+    } );
     
     $w("#button1").onClick( (event) =>
         {

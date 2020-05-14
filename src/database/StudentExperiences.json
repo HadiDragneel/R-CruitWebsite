@@ -67,6 +67,17 @@
       "type": "datetime",
       "index": 4
     },
+    "CVs-2": {
+      "displayName": "CVs-2",
+      "sortable": false,
+      "referencedCollection": "CVs",
+      "referencingDisplayName": "Student Experiences",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "studentExperiences",
+      "type": "multi-reference",
+      "index": 10
+    },
     "CVs-1": {
       "displayName": "CVs-1",
       "sortable": false,

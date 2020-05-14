@@ -137,6 +137,17 @@
       "type": "multi-reference",
       "index": 5
     },
+    "Employers-5": {
+      "displayName": "Employers-5",
+      "sortable": false,
+      "referencedCollection": "Employers",
+      "referencingDisplayName": "Vacancies",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "vacancies",
+      "type": "multi-reference",
+      "index": 18
+    },
     "title": {
       "displayName": "Job Title",
       "sortable": true,
