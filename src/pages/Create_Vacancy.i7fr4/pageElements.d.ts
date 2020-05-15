@@ -1,7 +1,6 @@
 type PageElementsMap = {
   "#page1": $w.Page;
   "#text72": $w.Text;
-  "#input18": $w.TextInput;
   "#textBox1": $w.TextBox;
   "#button2": $w.Button;
   "#button3": $w.Button;
@@ -19,6 +18,7 @@ type PageElementsMap = {
   "#text74": $w.Text;
   "#text73": $w.Text;
   "#vectorImage1": $w.VectorImage;
+  "#input18": $w.TextInput;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
