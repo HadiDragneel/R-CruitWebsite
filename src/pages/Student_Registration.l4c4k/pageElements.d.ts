@@ -27,6 +27,7 @@ type PageElementsMap = {
   "#captcha1": $w.Captcha;
   "#submitButton": $w.Button;
   "#vectorImage1": $w.VectorImage;
+  "#checkbox1": $w.Checkbox;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;

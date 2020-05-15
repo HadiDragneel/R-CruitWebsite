@@ -11,6 +11,8 @@ type PageElementsMap = {
   "#submitButton": $w.Button;
   "#text74": $w.Text;
   "#text73": $w.Text;
+  "#text75": $w.Text;
+  "#checkbox1": $w.Checkbox;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
