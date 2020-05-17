@@ -1,0 +1,23 @@
+export async function testAI (keyPhrasesInput) {
+    
+    "use strict";
+
+    const { TextAnalyticsClient, AzureKeyCredential } = require("@azure/ai-text-analytics");
+
+    const key = '07b152ed90df478ebd8420b834e72e7f';
+    const endpoint = 'https://rcruit.cognitiveservices.azure.com/';
+    
+    const textAnalyticsClient = new TextAnalyticsClient(endpoint,  new AzureKeyCredential(key));
+    console.log(endpoint);
+    
+    const keyPhraseResult = await textAnalyticsClient.extractKeyPhrases(keyPhrasesInput);
+    
+    keyPhraseResult.forEach(document => {
+        console.log(`ID: ${document.id}`);
+        console.log(`\tDocument Key Phrases: ${document.keyPhrases}`);
+    });
+    
+    
+    
+}
+

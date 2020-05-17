@@ -1,4 +1,8 @@
 import wixWindow from 'wix-window';
+import {testAI} from 'backend/ner';
+
+
+
 
 
 const exampleData = [
@@ -23,6 +27,13 @@ let added = 0;
 
 
 $w.onReady(function (){
+    
+    const keyPhrasesInput = [];
+    
+
+    
+    
+    
 
     $w("#repeater1").data = [];
 
@@ -40,6 +51,13 @@ $w.onReady(function (){
 
     $w("#submitButton").onClick( (event) =>
         {
+
+            $w("#repeater1").forEachItem( ($item, itemData, index) => {
+                keyPhrasesInput.push($item("#input8").value);
+            } );
+        
+            testAI(keyPhrasesInput);
+        
 
             let jump = false;
 
@@ -60,16 +78,9 @@ $w.onReady(function (){
                 }
 
             }
-
-            /*$w("#repeater1").forEachItem( ($item, itemData, index) => {
-                  if(itemData.boolField){
-                    $item("#myText").text = "Yes Ma'am!";
-                  }
-                  else {
-                    $item("#myText").text = "No way!";
-                  }
-            } );
-                */
+            
+            
+                
 
         }
     );
