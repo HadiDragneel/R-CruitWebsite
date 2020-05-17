@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@azure/ai-text-analytics": "1.0.0-preview.4"
+  }
+}
