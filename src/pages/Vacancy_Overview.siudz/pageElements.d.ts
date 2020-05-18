@@ -1,4 +1,5 @@
 type PageElementsMap = {
+  "#page1": $w.Page;
   "#vectorImage1": $w.VectorImage;
   "#line2": $w.HiddenCollapsedElement;
   "#text72": $w.Text;
@@ -11,7 +12,6 @@ type PageElementsMap = {
   "#box1": $w.Box;
   "#description": $w.Text;
   "#vectorImage2": $w.VectorImage;
-  "#page1": $w.Page;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
