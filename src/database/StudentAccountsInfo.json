@@ -1,0 +1,130 @@
+{
+  "displayName": "StudentAccountsInfo",
+  "permissions": {
+    "insert": "anyone",
+    "update": "siteMemberAuthor",
+    "remove": "siteMemberAuthor",
+    "read": "siteMemberAuthor"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "StudentAccountsInfo",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "phoneNumber": {
+      "displayName": "Phone Number",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "email": {
+      "displayName": "Email",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "fullName": {
+      "displayName": "Full Name",
+      "sortable": true,
+      "isDeleted": true,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "dateOfBirth": {
+      "displayName": "Date Of Birth",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 7
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "lastName": {
+      "displayName": "Last Name",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 12
+    },
+    "firstName": {
+      "displayName": "First Name",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 11
+    },
+    "nationality": {
+      "displayName": "Nationality",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    },
+    "address": {
+      "displayName": "Address",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "address",
+      "index": 6
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}

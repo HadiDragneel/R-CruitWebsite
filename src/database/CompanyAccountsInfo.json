@@ -1,0 +1,109 @@
+{
+  "displayName": "CompanyAccountsInfo",
+  "permissions": {
+    "insert": "anyone",
+    "update": "siteMemberAuthor",
+    "remove": "siteMemberAuthor",
+    "read": "siteMember"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "CompanyAccountsInfo",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "phoneNumber": {
+      "displayName": "Phone Number",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "emailAddress": {
+      "displayName": "Email Address",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "companyName": {
+      "displayName": "Company Name",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "address": {
+      "displayName": "Address",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "address",
+      "index": 6
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "vacancies": {
+      "displayName": "Vacancies",
+      "sortable": true,
+      "referencedCollection": "Vacancies",
+      "referencingDisplayName": "CompanyAccountsInfo",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "CompanyAccountsInfo",
+      "type": "multi-reference",
+      "index": 9
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}
