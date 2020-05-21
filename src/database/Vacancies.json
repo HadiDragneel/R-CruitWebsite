@@ -19,6 +19,17 @@
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
+    "CompanyAccountsInfo": {
+      "displayName": "CompanyAccountsInfo",
+      "sortable": false,
+      "referencedCollection": "CompanyAccountsInfo",
+      "referencingDisplayName": "Vacancies",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "vacancies",
+      "type": "multi-reference",
+      "index": 19
+    },
     "jobQualifications": {
       "displayName": "Job Qualifications",
       "sortable": true,
