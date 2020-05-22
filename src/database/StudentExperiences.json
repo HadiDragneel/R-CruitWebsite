@@ -72,7 +72,7 @@
       "sortable": false,
       "referencedCollection": "CVs",
       "referencingDisplayName": "Student Experiences",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "studentExperiences",
       "type": "multi-reference",

@@ -90,7 +90,7 @@
       "sortable": false,
       "referencedCollection": "Vacancies",
       "referencingDisplayName": "Job Qualifications",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "jobQualifications",
       "type": "multi-reference",

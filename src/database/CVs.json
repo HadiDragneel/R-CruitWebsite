@@ -65,7 +65,7 @@
       "sortable": true,
       "referencedCollection": "StudentExperiences",
       "referencingDisplayName": "CVs-2",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "CVs-2",
       "type": "multi-reference",
@@ -103,6 +103,14 @@
       "type": "text",
       "index": 10
     },
+    "qualifications": {
+      "displayName": "Qualifications",
+      "sortable": true,
+      "isDeleted": true,
+      "systemField": false,
+      "type": "array",
+      "index": 13
+    },
     "desiredContract": {
       "displayName": "Desired Contract",
       "sortable": true,
@@ -126,6 +134,14 @@
       "systemField": false,
       "type": "text",
       "index": 0
+    },
+    "experiences": {
+      "displayName": "Experiences",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "array",
+      "index": 14
     }
   },
   "displayField": "title",
