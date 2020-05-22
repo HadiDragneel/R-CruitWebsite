@@ -22,26 +22,32 @@ $w.onReady(function () {
     $w('#submitButton').onClick((event) => {
         if ($w('#companyName').valid && $w('#address').valid && $w('#phoneNumber').valid && $w('#email').valid && $w('#password').valid) {
 
-            let email = $w('#email').value;
-            let password = $w('#password').value;
-            let companyName = $w('#companyName').value;
-
-            wixUsers.register(email, password, {
-                contactInfo: {
-                    "firstName": companyName
-                }
-            });
-
-            $w('#companyDataset').save().then((event) => {
-                wixLocation.to('/home');
-            });
+            registerCompanyAccount()
 
         } else {
             console.log("Not all fields filled in");
         }
 
-
     });
+
+    function registerCompanyAccount() {
+
+        let email = $w('#email').value;
+        let password = $w('#password').value;
+        let companyName = $w('#companyName').value;
+
+        wixUsers.register(email, password, {
+            contactInfo: {
+                "firstName": companyName
+            }
+        });
+
+        $w('#companyDataset').save(); // Saves extra info to the "CompanyAccountInfo" database
+        wixLocation.to('/home'); // Redirects to home page
+
+
+    }
+
 
 
 

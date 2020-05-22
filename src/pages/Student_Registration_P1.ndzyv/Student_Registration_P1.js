@@ -40,7 +40,7 @@ $w.onReady(function () {
         let firstName = $w("#firstNameInput").value;
         let lastName = $w("#lastNameInput").value;
 
-        // registers an account with the email and password given as wix member of the site
+        // registers an account with the email, password and name given as wix member of the site.
         wixUsers.register(email, password, {
             contactInfo: {
                 "firstName": firstName,
