@@ -80,7 +80,7 @@
       "displayName": "Vacancy Reference",
       "sortable": false,
       "referencedCollection": "Vacancies",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "reference",
       "index": 6

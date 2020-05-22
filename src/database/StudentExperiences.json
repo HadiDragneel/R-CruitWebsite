@@ -109,7 +109,7 @@
       "displayName": "CV",
       "sortable": false,
       "referencedCollection": "CVs",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "reference",
       "index": 5

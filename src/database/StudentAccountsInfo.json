@@ -30,7 +30,7 @@
     "email": {
       "displayName": "Email",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "text",
       "index": 10
@@ -83,6 +83,15 @@
       "type": "datetime",
       "index": 4
     },
+    "cv": {
+      "displayName": "CV",
+      "sortable": true,
+      "referencedCollection": "CVs",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 13
+    },
     "lastName": {
       "displayName": "Last Name",
       "sortable": true,
@@ -116,7 +125,7 @@
       "index": 6
     },
     "title": {
-      "displayName": "Title",
+      "displayName": "Email",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,

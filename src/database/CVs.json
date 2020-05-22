@@ -22,7 +22,7 @@
     "student": {
       "displayName": "Student",
       "sortable": true,
-      "referencedCollection": "Students",
+      "referencedCollection": "StudentAccountsInfo",
       "isDeleted": false,
       "systemField": false,
       "type": "reference",
