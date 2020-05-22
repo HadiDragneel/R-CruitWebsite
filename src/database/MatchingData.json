@@ -1,0 +1,108 @@
+{
+  "displayName": "MatchingData",
+  "permissions": {
+    "insert": "admin",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "MatchingData",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "vacancyReference": {
+      "displayName": "Vacancy Reference",
+      "sortable": true,
+      "referencedCollection": "Vacancies",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 6
+    },
+    "match": {
+      "displayName": "%Match",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 9
+    },
+    "qualifications": {
+      "displayName": "Qualifications",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "array",
+      "index": 7
+    },
+    "cvReference": {
+      "displayName": "CV Reference",
+      "sortable": true,
+      "referencedCollection": "CVs",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 5
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "experiences": {
+      "displayName": "Experiences",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "array",
+      "index": 8
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}
