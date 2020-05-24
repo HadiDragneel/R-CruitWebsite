@@ -1,17 +1,4 @@
 type PageElementsMap = {
-  "#page1": $w.Page;
-  "#vectorImage1": $w.VectorImage;
-  "#line2": $w.HiddenCollapsedElement;
-  "#text72": $w.Text;
-  "#line1": $w.HiddenCollapsedElement;
-  "#dataset1": $w.dataset;
-  "#text73": $w.Text;
-  "#repeater1": $w.Repeater;
-  "#container2": $w.Container;
-  "#text74": $w.Text;
-  "#box1": $w.Box;
-  "#description": $w.Text;
-  "#vectorImage2": $w.VectorImage;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
