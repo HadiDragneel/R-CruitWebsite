@@ -1,7 +1,26 @@
 type PageElementsMap = {
+  "#page1": $w.Page;
+  "#text72": $w.Text;
+  "#input18": $w.TextInput;
+  "#textBox1": $w.TextBox;
+  "#addQualificationButton": $w.Button;
+  "#removeQualificationButton": $w.Button;
+  "#repeater1": $w.Repeater;
+  "#container2": $w.Container;
+  "#input14": $w.TextInput;
+  "#input15": $w.TextInput;
+  "#line1": $w.HiddenCollapsedElement;
+  "#input8": $w.TextInput;
+  "#input16": $w.TextInput;
+  "#input17": $w.TextInput;
+  "#captcha1": $w.Captcha;
+  "#changeConfirmation": $w.Button;
+  "#deleteVacancyButton": $w.Button;
+  "#text74": $w.Text;
+  "#text73": $w.Text;
+  "#vectorImage1": $w.VectorImage;
   "#header1": $w.Header;
   "#image2": $w.Image;
-  "#horizontalMenu1": $w.Menu;
   "#container1": $w.HiddenCollapsedElement;
   "#verticalMenu1": $w.Menu;
   "#profile1": $w.IFrame;
@@ -15,4 +34,6 @@ type PageElementsMap = {
   "#socialBar1": $w.HiddenCollapsedElement;
   "#text15": $w.Text;
   "#text48": $w.Text;
+  "#horizontalMenu1": $w.Menu;
+  "#accountNavBar1": $w.AccountNavBar;
 }
