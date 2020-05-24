@@ -80,7 +80,7 @@
       "displayName": "Vacancy Reference",
       "sortable": false,
       "referencedCollection": "Vacancies",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "reference",
       "index": 6
@@ -90,7 +90,7 @@
       "sortable": false,
       "referencedCollection": "Vacancies",
       "referencingDisplayName": "Job Qualifications",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "jobQualifications",
       "type": "multi-reference",

@@ -57,6 +57,7 @@ $w.onReady(function (){
             } );
         
             testAI(keyPhrasesInput);
+
         
 
             let jump = false;

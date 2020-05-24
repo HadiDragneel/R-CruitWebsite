@@ -1,11 +1,5 @@
 {
   "displayName": "Vacancies",
-  "permissions": {
-    "insert": "anyone",
-    "update": "admin",
-    "remove": "admin",
-    "read": "admin"
-  },
   "allowedOperations": [
     "count",
     "get",
@@ -21,14 +15,14 @@
   "fields": {
     "jobQualifications": {
       "displayName": "Job Qualifications",
-      "sortable": true,
+      "sortable": false,
       "referencedCollection": "JobQualifications",
       "referencingDisplayName": "Vacancies-2",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "Vacancies-2",
       "type": "multi-reference",
-      "index": 12
+      "index": 4
     },
     "studentsNeeded": {
       "displayName": "Students Needed",
@@ -36,18 +30,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "number",
-      "index": 8
-    },
-    "Employers-3": {
-      "displayName": "Employers-3",
-      "sortable": false,
-      "referencedCollection": "Employers",
-      "referencingDisplayName": "Vacancies",
-      "isDeleted": true,
-      "systemField": false,
-      "referencingFieldKey": "vacancies",
-      "type": "multi-reference",
-      "index": 15
+      "index": 10
     },
     "_id": {
       "displayName": "ID",
@@ -55,7 +38,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "text",
-      "index": 1
+      "index": 0
     },
     "_owner": {
       "displayName": "Owner",
@@ -63,7 +46,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "text",
-      "index": 2
+      "index": 3
     },
     "jobDescription": {
       "displayName": "Job Description",
@@ -71,7 +54,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 6
+      "index": 9
     },
     "_createdDate": {
       "displayName": "Created Date",
@@ -79,25 +62,15 @@
       "isDeleted": false,
       "systemField": true,
       "type": "datetime",
-      "index": 3
+      "index": 1
     },
-    "Employers-1": {
-      "displayName": "Employer",
-      "sortable": false,
-      "referencedCollection": "Employers",
-      "isDeleted": true,
-      "systemField": false,
-      "type": "reference",
-      "index": 13
-    },
-    "employer": {
-      "displayName": "Employer",
+    "hoursInWeek": {
+      "displayName": "Hours In Week",
       "sortable": true,
-      "referencedCollection": "Employers",
       "isDeleted": false,
       "systemField": false,
-      "type": "reference",
-      "index": 16
+      "type": "text",
+      "index": 12
     },
     "_updatedDate": {
       "displayName": "Updated Date",
@@ -105,87 +78,56 @@
       "isDeleted": false,
       "systemField": true,
       "type": "datetime",
-      "index": 4
+      "index": 2
     },
-    "Employers-4": {
-      "displayName": "Employers-4",
-      "sortable": false,
-      "referencedCollection": "Employers",
-      "referencingDisplayName": "Vacancies",
-      "isDeleted": true,
-      "systemField": false,
-      "referencingFieldKey": "vacancies",
-      "type": "multi-reference",
-      "index": 17
-    },
-    "hoursAWeek": {
-      "displayName": "Hours A Week",
+    "qualifications": {
+      "displayName": "Qualifications",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
-      "type": "number",
-      "index": 10
-    },
-    "Employers": {
-      "displayName": "Employers",
-      "sortable": false,
-      "referencedCollection": "Employers",
-      "referencingDisplayName": "Vacancies",
-      "isDeleted": true,
-      "systemField": false,
-      "referencingFieldKey": "vacancies",
-      "type": "multi-reference",
-      "index": 5
+      "type": "array",
+      "index": 13
     },
     "Employers-5": {
       "displayName": "Employers-5",
       "sortable": false,
       "referencedCollection": "Employers",
       "referencingDisplayName": "Vacancies",
+      "isDeleted": true,
+      "systemField": false,
+      "referencingFieldKey": "vacancies",
+      "type": "multi-reference",
+      "index": 6
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "CompanyAccountsInfo-1": {
+      "displayName": "CompanyAccountsInfo-1",
+      "sortable": false,
+      "referencedCollection": "CompanyAccountsInfo",
+      "referencingDisplayName": "Vacancies",
       "isDeleted": false,
       "systemField": false,
       "referencingFieldKey": "vacancies",
       "type": "multi-reference",
-      "index": 18
+      "index": 5
     },
-    "title": {
+    "jobTitle": {
       "displayName": "Job Title",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "text",
-      "index": 0
+      "index": 8
     },
-    "Employers-2": {
-      "displayName": "Employers-2",
-      "sortable": false,
-      "referencedCollection": "Employers",
-      "referencingDisplayName": "Vacancies",
-      "isDeleted": true,
-      "systemField": false,
-      "referencingFieldKey": "vacancies",
-      "type": "multi-reference",
-      "index": 14
-    },
-    "studentsTimeNeeded": {
-      "displayName": "Students Time Needed",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 9
-    },
-    "newField": {
-      "displayName": "New Field",
-      "sortable": true,
-      "referencedCollection": "Vacancies",
-      "isDeleted": true,
-      "systemField": false,
-      "type": "reference",
-      "index": 7
-    },
-    "comments": {
-      "displayName": "Comments",
+    "timeStudentsNeeded": {
+      "displayName": "Time Students Needed",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,

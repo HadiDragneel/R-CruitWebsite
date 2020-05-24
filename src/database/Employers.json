@@ -96,7 +96,7 @@
       "sortable": true,
       "referencedCollection": "Vacancies",
       "referencingDisplayName": "Employers-5",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "Employers-5",
       "type": "multi-reference",

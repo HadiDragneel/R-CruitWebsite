@@ -1,7 +1,7 @@
 {
-  "displayName": "CV's",
+  "displayName": "MatchingData",
   "permissions": {
-    "insert": "anyone",
+    "insert": "admin",
     "update": "admin",
     "remove": "admin",
     "read": "admin"
@@ -14,28 +14,11 @@
     "insert",
     "update"
   ],
-  "id": "CVs",
+  "id": "MatchingData",
   "isDeleted": false,
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
-    "student": {
-      "displayName": "Student",
-      "sortable": true,
-      "referencedCollection": "StudentAccountsInfo",
-      "isDeleted": false,
-      "systemField": false,
-      "type": "reference",
-      "index": 12
-    },
-    "searchedForJob": {
-      "displayName": "Searched for Job",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 8
-    },
     "_id": {
       "displayName": "ID",
       "sortable": true,
@@ -60,17 +43,6 @@
       "type": "datetime",
       "index": 3
     },
-    "studentExperiences": {
-      "displayName": "Student Experiences",
-      "sortable": true,
-      "referencedCollection": "StudentExperiences",
-      "referencingDisplayName": "CVs-2",
-      "isDeleted": true,
-      "systemField": false,
-      "referencingFieldKey": "CVs-2",
-      "type": "multi-reference",
-      "index": 11
-    },
     "_updatedDate": {
       "displayName": "Updated Date",
       "sortable": true,
@@ -79,52 +51,38 @@
       "type": "datetime",
       "index": 4
     },
-    "timeInNl": {
-      "displayName": "Time in NL",
+    "vacancyReference": {
+      "displayName": "Vacancy Reference",
       "sortable": true,
+      "referencedCollection": "Vacancies",
       "isDeleted": false,
       "systemField": false,
-      "type": "text",
-      "index": 9
-    },
-    "motivation": {
-      "displayName": "Motivation",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 7
-    },
-    "heardAboutUs": {
-      "displayName": "Heard About Us",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 10
-    },
-    "qualifications": {
-      "displayName": "Qualifications",
-      "sortable": true,
-      "isDeleted": true,
-      "systemField": false,
-      "type": "array",
-      "index": 13
-    },
-    "desiredContract": {
-      "displayName": "Desired Contract",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
+      "type": "reference",
       "index": 6
     },
-    "weeklyHours": {
-      "displayName": "Weekly Hours",
+    "match": {
+      "displayName": "%Match",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
       "type": "number",
+      "index": 9
+    },
+    "qualifications": {
+      "displayName": "Qualifications",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "array",
+      "index": 7
+    },
+    "cvReference": {
+      "displayName": "CV Reference",
+      "sortable": true,
+      "referencedCollection": "CVs",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
       "index": 5
     },
     "title": {
@@ -141,7 +99,7 @@
       "isDeleted": false,
       "systemField": false,
       "type": "array",
-      "index": 14
+      "index": 8
     }
   },
   "displayField": "title",
