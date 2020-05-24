@@ -1,4 +1,6 @@
 type PageElementsMap = {
+  "#page1": $w.Page;
+  "#memberDraftsPage1": $w.IFrame;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#container1": $w.HiddenCollapsedElement;

@@ -11,3 +11,7 @@ $w.onReady(function(){
         })
     })
 })
+
+$w('#ForgotPasswordButton').onClick(function(){
+    wixUsers.promptForgotPassword();
+    })
