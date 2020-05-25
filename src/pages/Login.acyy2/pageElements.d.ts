@@ -7,6 +7,8 @@ type PageElementsMap = {
   "#LoginSubmit": $w.Button;
   "#header1": $w.Header;
   "#image2": $w.Image;
+  "#horizontalMenu1": $w.Menu;
+  "#accountNavBar1": $w.AccountNavBar;
   "#container1": $w.HiddenCollapsedElement;
   "#verticalMenu1": $w.Menu;
   "#profile1": $w.IFrame;
@@ -20,6 +22,4 @@ type PageElementsMap = {
   "#socialBar1": $w.HiddenCollapsedElement;
   "#text15": $w.Text;
   "#text48": $w.Text;
-  "#horizontalMenu1": $w.Menu;
-  "#accountNavBar1": $w.AccountNavBar;
 }
