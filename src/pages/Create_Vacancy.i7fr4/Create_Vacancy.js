@@ -11,17 +11,12 @@ const exampleData = [
   {"_id": "7"},
   {"_id": "8"},
   {"_id": "9"},
-  {"_id": "10"},
-  {"_id": "11"},
-  {"_id": "12"},
-  {"_id": "13"}
+  {"_id": "10"}
 ];
 
 let added = 0;
 
-
-
-
+// TODO: Insert qualifications in data collection field of current user its created vacancy
 $w.onReady(function (){
 
 
