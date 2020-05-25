@@ -1,0 +1,19 @@
+export async function denseModel() {
+    const tf = require('@tensorflow/tfjs');
+
+    // Train a simple model:
+    const model = tf.sequential();
+    model.add(tf.layers.dense({units: 10, activation: 'relu', inputShape: [10]}));
+    model.add(tf.layers.dense({units: 1, activation: 'linear'}));
+    model.compile({optimizer: 'sgd', loss: 'meanSquaredError'});
+
+    const xs = tf.randomNormal([10, 10]);
+    const ys = tf.randomNormal([10, 1]);
+
+    return await model.fit(xs, ys, {
+        epochs: 10,
+        callbacks: {
+            onEpochEnd: (epoch, log) => console.log(`Epoch ${epoch}: loss = ${log.loss}`)
+        }
+    })
+}

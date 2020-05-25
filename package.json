@@ -7,6 +7,6 @@
     "corvid-types": "^0.1.96"
   },
   "dependencies": {
-    "@azure/ai-text-analytics": "^1.0.0-preview.4"
+    "@tensorflow/tfjs": "^1.7.4"
   }
 }

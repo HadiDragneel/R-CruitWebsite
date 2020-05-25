@@ -1,5 +1,4 @@
 import wixWindow from 'wix-window';
-import {testAI} from 'backend/ner';
 import wixUsers from 'wix-users';
 import wixData from 'wix-data'
 
