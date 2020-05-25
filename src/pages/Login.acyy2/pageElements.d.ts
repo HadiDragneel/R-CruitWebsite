@@ -1,7 +1,14 @@
 type PageElementsMap = {
+  "#page1": $w.Page;
+  "#text72": $w.Text;
+  "#LoginEmail": $w.TextInput;
+  "#LoginPassword": $w.TextInput;
+  "#ForgotPasswordButton": $w.Button;
+  "#LoginSubmit": $w.Button;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
+  "#accountNavBar1": $w.AccountNavBar;
   "#container1": $w.HiddenCollapsedElement;
   "#verticalMenu1": $w.Menu;
   "#profile1": $w.IFrame;
