@@ -100,7 +100,7 @@
       "index": 6
     },
     "title": {
-      "displayName": "Title",
+      "displayName": "Job Title",
       "sortable": true,
       "isDeleted": false,
       "systemField": false,
@@ -121,7 +121,7 @@
     "jobTitle": {
       "displayName": "Job Title",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "text",
       "index": 8

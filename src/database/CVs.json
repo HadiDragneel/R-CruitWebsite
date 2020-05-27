@@ -23,9 +23,11 @@
       "displayName": "Student",
       "sortable": true,
       "referencedCollection": "StudentAccountsInfo",
+      "referencingDisplayName": "CVs",
       "isDeleted": false,
       "systemField": false,
-      "type": "reference",
+      "referencingFieldKey": "CVs",
+      "type": "multi-reference",
       "index": 12
     },
     "searchedForJob": {

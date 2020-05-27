@@ -23,6 +23,13 @@ $w.onReady(function () {
     const experiences = [];
     const user = wixUsers.currentUser;
 
+    const inputFields = [
+        $w("#input11"),
+        $w("#input12"),
+        $w("#input13"),
+        $w("#input14"),
+        $w("#input15")]
+
     $w("#repeater1").data = [];
 
     $w("#addWorkButton").onClick((event) => {
@@ -38,6 +45,20 @@ $w.onReady(function () {
 
     $w("#submitButton").onClick((event) => {
 
+            let isEmptyField = false
+
+            inputFields.forEach(field => {
+                // TODO: Check for white space too
+                if (field.value === "") {
+                    isEmptyField = true
+                }
+            })
+
+            if (isEmptyField) {
+                console.log("[X] Empty field found")
+                return
+            }
+
             $w("#repeater1").forEachItem(($item, itemData, index) => {
 
                 if ($item("#input8").value !== "") {
@@ -50,23 +71,29 @@ $w.onReady(function () {
                 }
             });
 
+            const radioOptions = $w("#radioGroup1").options
             let toInsert = {
-                "_id": user.id,
+                "weeklyHours": inputFields[0].value,
+                "desiredContract": inputFields[1].value,
+                "motivation": inputFields[2].value,
+                "searchedForJob": inputFields[3].value,
+                "timeInNl": inputFields[4].value,
+                "heardAboutUs": radioOptions[$w("#radioGroup1").selectedIndex].label,
                 "experiences": experiences
             };
 
             wixData.save("CVs", toInsert)
                 .then((results) => {
-                    console.log(results)
+                    console.log("[X] Inserted all but reference")
+                    // TODO: Check in published site if student reference is broken due to user.id now it is
+                    //  broken because the current user its id is not in the StudentAccountsInfo data collection
+                    //  this needs to be fixed
+                    wixData.insertReference("CVs", "student", results._id, user.id)
+                        .then(() => console.log("[X] Inserted reference now too"))
                 })
-                .catch((err) => {
-                    console.log(err);
+                .catch((error) => {
+                    console.log("[X] And error occurred", error);
                 });
-
-            // TODO: Fix that experiences is being inserted in the wrong row
-
-            console.log(experiences)
-            console.log(user.id)
 
             let jump = false;
 
