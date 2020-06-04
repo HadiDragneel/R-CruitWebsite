@@ -1,0 +1,28 @@
+const tf = require("@tensorflow/tfjs");
+const use = require('@tensorflow-models/universal-sentence-encoder');
+
+export async function tokenize() {
+    use.load().then(model => {
+        // Embed an array of sentences.
+        const sentences = [
+            'I know python.',
+            'He should know python',
+            'Javascript for life'
+        ];
+        model.embed(sentences).then(embeddings => {
+            // `embeddings` is a 2D tensor consisting of the 512-dimensional embeddings for each sentence.
+            // So in this example `embeddings` has the shape [2, 512].
+            embeddings.print(true /* verbose */);
+            console.log(embeddings[0], embeddings[1])
+        });
+    });
+}
+
+function similarity(a, b) {
+    const magnitudeA = Math.sqrt(this.dot(a, a));
+    const magnitudeB = Math.sqrt(this.dot(b, b));
+    if (magnitudeA && magnitudeB)
+        return this.dot(a, b) / (magnitudeA * magnitudeB);
+    else return false
+}
+

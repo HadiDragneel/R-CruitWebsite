@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@tensorflow/tfjs": "0.13.3"
+    "@tensorflow/tfjs": "0.13.3",
+    "@tensorflow-models/universal-sentence-encoder": "1.2.0"
   }
 }
