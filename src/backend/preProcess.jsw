@@ -4,42 +4,107 @@ const use = require('@tensorflow-models/universal-sentence-encoder');
 export async function tokenize() {
     use.load().then(model => {
         // Embed an array of sentences.
-        const sentences = [
-            "Are you good?",
-            "Yes I am good"
-        ];
-        model.embed(sentences).then(embeddings => {
-            // `embeddings` is a 2D tensor consisting of the 512-dimensional embeddings for each sentence.
-            // So in this example `embeddings` has the shape [2, 512].
-            embeddings.print(true /* verbose */);
-            const similarityMatrix = cosine_similarity_matrix(embeddings.arraySync())
-            console.log(similarityMatrix)
-        });
+        // let list_sentences = [
+        //     // Smartphones
+        //     "I like my phone",
+        //     "My phone is not good.",
+        //     "Your cellphone looks great.",
+        //
+        //     // Weather
+        //     "Will it snow tomorrow?",
+        //     "Recently a lot of hurricanes have hit the US",
+        //     "Global warming is real",
+        //
+        //     // Food and health
+        //     "An apple a day, keeps the doctors away",
+        //     "Eating strawberries is healthy",
+        //     "Is paleo better than keto?",
+        //
+        //     // Asking about age
+        //     "How old are you?",
+        //     "what is your age?"
+        // ];
+
+        // model.embed(list_sentences).then(embeddings => {
+        //     embeddings.print(true /* verbose */);
+        //     const similarityMatrix = cosine_similarity_matrix(embeddings.arraySync())
+        //     console.log(similarityMatrix)
+        // });
+
     });
-}
+    const ToDos = [
+        "Hit the gym",
+        "Go for a run",
+        "Study Math",
+        "Watch Biology lectures",
+        "Date with Michele",
+        "Have dinner with Pam",
+    ]
 
-export function similarity(a, b) {
-    console.log("A", a)
-    const magnitudeA = Math.sqrt(tf.dot(a, a));
-    const magnitudeB = Math.sqrt(tf.dot(b, b));
-    if (magnitudeA && magnitudeB)
-        return tf.dot(a, b) / (magnitudeA * magnitudeB);
-    else return false
-}
+    const list_sentences = [
+        // Smartphones
+        "I like my phone",
+        "My phone is not good.",
+        "Your cellphone looks great.",
 
-export function cosine_similarity_matrix(matrix) {
-    let cosine_similarity_matrix = [];
-    for (let i = 0; i < matrix.length; i++) {
-        let row = [];
-        for (let j = 0; j < i; j++) {
-            row.push(cosine_similarity_matrix[j][i]);
-        }
-        row.push(1);
-        for (let j = (i + 1); j < matrix.length; j++) {
-            row.push(similarity(matrix[i], matrix[j]));
-        }
-        cosine_similarity_matrix.push(row);
+        // Weather
+        "Will it snow tomorrow?",
+        "Recently a lot of hurricanes have hit the US",
+        "Global warming is real",
+
+        // Food and health
+        "An apple a day, keeps the doctors away",
+        "Eating strawberries is healthy",
+        "Is paleo better than keto?",
+
+        // Asking about age
+        "How old are you?",
+        "what is your age?"
+    ];
+
+    const model = await use.load()
+    const todoEmbedding = await model.embed(list_sentences)
+    console.log(todoEmbedding.shape)
+
+
+    const similarityScore = async (sentenceAIndex, sentenceBIndex, embeddings) => {
+        const sentenceAEmbeddings = embeddings.slice([sentenceAIndex, 0], [1])
+        const sentenceBEmbeddings = embeddings.slice([sentenceBIndex, 0], [1])
+        const sentenceATranspose = false
+        const sentenceBTransepose = true
+        const scoreData = await sentenceAEmbeddings
+            .matMul(sentenceBEmbeddings, sentenceATranspose, sentenceBTransepose)
+            .data()
+        return scoreData[0]
     }
-    return cosine_similarity_matrix;
+
+    const todoEmbeddings = await model.embed(list_sentences)
+    const firstPairScore = await similarityScore(0, 1, todoEmbeddings)
+    console.log(`${list_sentences[0]}\n${list_sentences[1]}\nsimilarity: ${firstPairScore}`)
 }
+
+// export function similarity(a, b) {
+//     var magA = Math.sqrt(this.dot(a, a));
+//     var magB = Math.sqrt(this.dot(b, b));
+//     if (magA && magB) return this.dot(a, b) / (magA * magB);
+//     else return false
+// }
+//
+// export function cosine_similarity_matrix(matrix){
+//     let cosine_similarity_matrix = [];
+//     for(let i=0;i<matrix.length;i++){
+//         console.log("i", i)
+//         let row = [];
+//         for(let j=0;j<=i;j++){
+//             row.push(this.cosine_similarity_matrix[j][i]);
+//             console.log("j", j)
+//         }
+//         row.push(1);
+//         for(let j=(i+1);j<matrix.length;j++){
+//             row.push(this.similarity(matrix[i],matrix[j]));
+//         }
+//         cosine_similarity_matrix.push(row);
+//     }
+//     return cosine_similarity_matrix;
+// }
 
