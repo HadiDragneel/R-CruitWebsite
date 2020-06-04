@@ -87,7 +87,7 @@
       "displayName": "CV",
       "sortable": true,
       "referencedCollection": "CVs",
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "reference",
       "index": 13
@@ -131,6 +131,17 @@
       "systemField": false,
       "type": "text",
       "index": 0
+    },
+    "CVs": {
+      "displayName": "CVs",
+      "sortable": false,
+      "referencedCollection": "CVs",
+      "referencingDisplayName": "Student",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "student",
+      "type": "multi-reference",
+      "index": 14
     }
   },
   "displayField": "title",

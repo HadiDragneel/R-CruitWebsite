@@ -19,7 +19,8 @@ type PageElementsMap = {
   "#radioGroup1": $w.RadioButtonGroup;
   "#submitButton": $w.Button;
   "#vectorImage1": $w.VectorImage;
-  "#dataset1": $w.dataset;
+  "#text76": $w.Text;
+  "#text77": $w.Text;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
