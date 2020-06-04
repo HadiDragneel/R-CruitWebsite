@@ -5,24 +5,41 @@ export async function tokenize() {
     use.load().then(model => {
         // Embed an array of sentences.
         const sentences = [
-            'I know python.',
-            'He should know python',
-            'Javascript for life'
+            "Are you good?",
+            "Yes I am good"
         ];
         model.embed(sentences).then(embeddings => {
             // `embeddings` is a 2D tensor consisting of the 512-dimensional embeddings for each sentence.
             // So in this example `embeddings` has the shape [2, 512].
             embeddings.print(true /* verbose */);
-            console.log(embeddings[0], embeddings[1])
+            const similarityMatrix = cosine_similarity_matrix(embeddings.arraySync())
+            console.log(similarityMatrix)
         });
     });
 }
 
-function similarity(a, b) {
-    const magnitudeA = Math.sqrt(this.dot(a, a));
-    const magnitudeB = Math.sqrt(this.dot(b, b));
+export function similarity(a, b) {
+    console.log("A", a)
+    const magnitudeA = Math.sqrt(tf.dot(a, a));
+    const magnitudeB = Math.sqrt(tf.dot(b, b));
     if (magnitudeA && magnitudeB)
-        return this.dot(a, b) / (magnitudeA * magnitudeB);
+        return tf.dot(a, b) / (magnitudeA * magnitudeB);
     else return false
+}
+
+export function cosine_similarity_matrix(matrix) {
+    let cosine_similarity_matrix = [];
+    for (let i = 0; i < matrix.length; i++) {
+        let row = [];
+        for (let j = 0; j < i; j++) {
+            row.push(cosine_similarity_matrix[j][i]);
+        }
+        row.push(1);
+        for (let j = (i + 1); j < matrix.length; j++) {
+            row.push(similarity(matrix[i], matrix[j]));
+        }
+        cosine_similarity_matrix.push(row);
+    }
+    return cosine_similarity_matrix;
 }
 
