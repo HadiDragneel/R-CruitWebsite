@@ -35,9 +35,7 @@ export async function getScore(qualifications, experiences) {
             = ${tempScore * 100}%\n`)
             tempScores.push(tempScore)
         }
-        const max = Math.max(...tempScores)
-
-        scores.push(max)
+        scores.push(Math.max(...tempScores))
         tempScores = []
     }
 
