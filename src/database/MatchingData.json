@@ -71,7 +71,7 @@
     "qualifications": {
       "displayName": "Qualifications",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "array",
       "index": 7
@@ -96,7 +96,7 @@
     "experiences": {
       "displayName": "Experiences",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "array",
       "index": 8

@@ -89,10 +89,15 @@ $w.onReady(function () {
                 //  broken because the current user its id is not in the EmployersAccountInfo data collection
                 //  this needs to be fixed 
                 wixData.insertReference("Vacancies", "CompanyAccountsInfo-1", results._id, user.id)
-                    .then(() => console.log("[X] Inserted reference now too"))
+                    .then(() => {
+                            console.log("[X] Inserted reference now too")
+                            $w("#text73").show()
+                        }
+                    )
             })
             .catch((error) => {
                 console.log("[X] And error occurred", error);
+                $w("#text74").show()
             });
     })
 
@@ -117,8 +122,6 @@ $w.onReady(function () {
                 }
 
             }
-
-
 
 
         }

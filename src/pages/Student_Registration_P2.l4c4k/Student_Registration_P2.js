@@ -89,10 +89,14 @@ $w.onReady(function () {
                     //  broken because the current user its id is not in the StudentAccountsInfo data collection
                     //  this needs to be fixed
                     wixData.insertReference("CVs", "student", results._id, user.id)
-                        .then(() => console.log("[X] Inserted reference now too"))
+                        .then(() => {
+                            console.log("[X] Inserted reference now too")
+                            $w("#text76").show()
+                        })
                 })
                 .catch((error) => {
                     console.log("[X] And error occurred", error);
+                    $w("#text77").show()
                 });
 
             let jump = false;
