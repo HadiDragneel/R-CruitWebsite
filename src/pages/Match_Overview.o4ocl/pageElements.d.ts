@@ -3,7 +3,7 @@ type PageElementsMap = {
   "#vectorImage1": $w.VectorImage;
   "#line2": $w.HiddenCollapsedElement;
   "#text72": $w.Text;
-  "#iCompany": $w.TextInput;
+  "#IStudent": $w.TextInput;
   "#datePicker1": $w.DatePicker;
   "#datePicker2": $w.DatePicker;
   "#datePicker3": $w.DatePicker;
@@ -13,11 +13,11 @@ type PageElementsMap = {
   "#text73": $w.Text;
   "#repeater1": $w.Repeater;
   "#container2": $w.Container;
-  "#text74": $w.Text;
+  "#StudentName": $w.Text;
   "#box1": $w.Box;
-  "#description": $w.Text;
+  "#qualificationsStudent": $w.Text;
   "#vectorImage2": $w.VectorImage;
-  "#text75": $w.Text;
+  "#descriptionStudent": $w.Text;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
