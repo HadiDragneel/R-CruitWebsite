@@ -15,7 +15,6 @@ type PageElementsMap = {
   "#captcha1": $w.Captcha;
   "#tosCheck": $w.Checkbox;
   "#submitButton": $w.Button;
-  "#IDInput": $w.TextInput;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
