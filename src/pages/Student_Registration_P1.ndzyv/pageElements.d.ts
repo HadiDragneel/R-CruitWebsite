@@ -1,7 +1,6 @@
 type PageElementsMap = {
   "#page1": $w.Page;
   "#text72": $w.Text;
-  "#studentAccountInfoDataset": $w.dataset;
   "#text73": $w.Text;
   "#firstNameInput": $w.TextInput;
   "#lastNameInput": $w.TextInput;
