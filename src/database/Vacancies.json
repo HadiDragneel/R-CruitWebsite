@@ -13,6 +13,17 @@
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
+    "MatchingData": {
+      "displayName": "MatchingData",
+      "sortable": false,
+      "referencedCollection": "MatchingData",
+      "referencingDisplayName": "Vacancy Reference",
+      "isDeleted": false,
+      "systemField": false,
+      "referencingFieldKey": "vacancyReference",
+      "type": "multi-reference",
+      "index": 14
+    },
     "jobQualifications": {
       "displayName": "Job Qualifications",
       "sortable": false,

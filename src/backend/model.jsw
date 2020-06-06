@@ -1,6 +1,9 @@
 const use = require('@tensorflow-models/universal-sentence-encoder');
 
+
+
 export async function getScore(qualifications, experiences) {
+    console.log("Now loading getscore");
     const qualifications_and_experiences = qualifications.concat(experiences)
     const model = await use.load()
 

@@ -64,8 +64,8 @@ $w.onReady(function () {
                 if ($item("#input8").value !== "") {
                     experiences.push(
                         {
-                            ["experience" + index.toString()]: $item("#input8").value,
-                            ["howLong" + index.toString()]: $item("#input9").value
+                            "experience": $item("#input8").value,
+                            "howLong": $item("#input9").value
                         }
                     )
                 }

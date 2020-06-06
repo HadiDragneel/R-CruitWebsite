@@ -1,4 +1,5 @@
 import {getScore} from 'backend/model';
+import wixData from 'wix-data';
 
 $w.onReady(async function () {
 
@@ -28,4 +29,6 @@ $w.onReady(async function () {
         }
     })
     // TODO: This code block above should be on the overview page for R'Cruit
+
+
 });

@@ -66,8 +66,8 @@ $w.onReady(function () {
             if ($item("#input14").value !== "") {
                 qualifications.push(
                     {
-                        ["qualification" + index.toString()]: $item("#input14").value,
-                        ["howLong" + index.toString()]: $item("#input15").value
+                        "qualification": $item("#input14").value,
+                        "howLong": $item("#input15").value
                     }
                 )
             }
