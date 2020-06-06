@@ -31,7 +31,9 @@ $w.onReady(function () {
 
         //email - ab@h.com
         //_id - 344033b4-f08c-4dfd-b39e-6613a6d38b06
-        matchStudent(experiences, "9ec171cd-39dd-4785-9873-16d60439b7c2")
+        matchStudent(experiences, "9ec171cd-39dd-4785-9873-16d60439b7c2").then(result => {
+            console.log("Done with register part 1")
+        })
 
         // //Checks if all fields have been filled in
         // if ($w('#firstNameInput').valid && $w('#lastNameInput').valid && $w('#addressInput').valid && $w('#dateofbirthInput').valid && $w('#phoneInput').valid && $w('#nationalityInput').valid && $w('#emailInput').valid && $w('#passwordInput').valid) {
@@ -72,7 +74,7 @@ async function matchStudent(experiences, cv_id) {
     const THRESHOLD = 0.6;
     wixData.query("Vacancies")
         .find()
-        .then(async(results) => {
+        .then(async (results) => {
             if (results.items.length > 0) {
                 let arrayOfMatches = [];
                 for (let i = 0; i < results.length; i++) {
@@ -90,7 +92,6 @@ async function matchStudent(experiences, cv_id) {
                     }
 
                     // TODO: This code below block should be on the overview page for R'Cruit
-
 
 
                     await getScore(arrayOfQualifications, experiences).then(score => {
@@ -113,18 +114,18 @@ async function matchStudent(experiences, cv_id) {
                 };
 
                 wixData.save("MatchingData", matchingData)
-                    .then( (results) => {
+                    .then((results) => {
                         wixData.replaceReferences("MatchingData", "vacancyReference", cv_id, arrayOfMatches)
-                            .then( () => {
+                            .then(() => {
                                 console.log("Vacancy matches updated!");
-                            } )
-                            .catch( (error) => {
+                            })
+                            .catch((error) => {
                                 console.log(error);
-                            } );
-                    } )
-                    .catch( (err) => {
+                            });
+                    })
+                    .catch((err) => {
                         console.log(err);
-                    } )
+                    })
 
 
             } else {

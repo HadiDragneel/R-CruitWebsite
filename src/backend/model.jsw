@@ -3,7 +3,6 @@ const use = require('@tensorflow-models/universal-sentence-encoder');
 
 
 export async function getScore(qualifications, experiences) {
-    console.log("Now loading getscore");
     const qualifications_and_experiences = qualifications.concat(experiences)
     const model = await use.load()
 
@@ -21,20 +20,18 @@ export async function getScore(qualifications, experiences) {
     const embeddings = await model.embed(qualifications_and_experiences)
 
     let scores = []
-    let experienceLength = experiences.length - 1
+    let experienceLength = experiences.length
     let tempScores = []
 
-    for (let i = 0; i < qualifications.length; i++) {
+    for (let qualification = 0; qualification < qualifications.length; qualification++) {
 
         for (let j = 0; j < experienceLength; j++) {
-            const experience = experienceLength + j
-            const tempScore = await similarityScore(i, experience, embeddings)
+            const experience = qualifications_and_experiences.indexOf(experiences[j])
+            const tempScore = await similarityScore(qualification, experience, embeddings)
 
             // TODO: Cleanup demo
             console.log(`\nThe % match between
-            Qualification ${i + 1}: ${qualifications_and_experiences[i]} \n
-            |AND|\n
-            Experience ${j + 1}: ${qualifications_and_experiences[experience]}\n
+            Qualification ${qualification}: ${qualifications_and_experiences[qualification]} |AND| Experience ${j}: ${qualifications_and_experiences[experience]}
             = ${tempScore * 100}%\n`)
             tempScores.push(tempScore)
         }
