@@ -23,6 +23,7 @@ $w.onReady(function () {
         if ($w('#companyName').valid && $w('#address').valid && $w('#phoneNumber').valid && $w('#email').valid && $w('#password').valid) {
 
             registerCompanyAccount()
+            companyRegistrationEmail("eec88993-fa00-49bb-81b3-b4e8bd8c80e3");
 
         } else {
             console.log("Not all fields filled in");
@@ -67,8 +68,14 @@ $w.onReady(function () {
 
 
     }
-
-
-
-
 });
+function companyRegistrationEmail(userID) {
+    wixUsers.emailUser('companyRegistrationNotification', userID, {
+        variables: {
+            companyName: $w('#companyName').value
+        }}).then((result)=>{
+        console.log("email notification sent")
+    }).catch((err)=>{
+        console.log(err);
+    })
+}

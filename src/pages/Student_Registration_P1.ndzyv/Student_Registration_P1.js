@@ -22,10 +22,14 @@ $w.onReady(function () {
     //Submit button function
     $w('#submitButton').onClick((event) => {
 
+        //let hadiUserID = "eec88993-fa00-49bb-81b3-b4e8bd8c80e3";
+        let userID = "eec88993-fa00-49bb-81b3-b4e8bd8c80e3"; // Hadi's user ID, temporary for testing
+
         //Checks if all fields have been filled in
         //var IDInUse = checkID();
         if ($w('#firstNameInput').valid && $w('#lastNameInput').valid && $w('#addressInput').valid && $w('#dateofbirthInput').valid && $w('#phoneInput').valid && $w('#nationalityInput').valid && $w('#emailInput').valid && $w('#passwordInput').valid) {
             registerStudentAccount()
+            studentRegistrationNotification(userID)
         } else {
             console.log("Not all fields filled in");
         }
@@ -87,5 +91,19 @@ $w.onReady(function () {
     }
 });
 
-
+function studentRegistrationNotification(userID) {
+    wixUsers.emailUser("studentRegistrationNotification", userID, {
+        variables: {
+            userName: $w("#firstNameInput").value
+        }
+    })
+        .then(() => {
+            console.log("email sent");
+            // do something after the email was sent successfully
+        })
+        .catch((err) => {
+            console.log(err);
+            // handle error that prevented the email from being sent
+        });
+}
 
