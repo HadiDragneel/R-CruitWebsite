@@ -20,8 +20,8 @@ type PageElementsMap = {
   "#submitButton": $w.Button;
   "#vectorImage1": $w.VectorImage;
   "#dataset1": $w.dataset;
-  "#text76": $w.Text;
-  "#text77": $w.Text;
+  "#text74": $w.Text;
+  "#text78": $w.Text;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;

@@ -43,7 +43,7 @@ $w.onReady(function () {
     });
 
     $w("#button4").onClick(event => {
-        let isEmptyField = false
+        let isInvalid = false
 
         if (!$w("#checkbox1").checked) {
             console.log("[X] Checkbox not checked")
@@ -52,13 +52,13 @@ $w.onReady(function () {
 
         inputFields.forEach(field => {
             // TODO: Check for white space too
-            if (field.valid) {
-                isEmptyField = true
+            if (!field.valid) {
+                isInvalid = true
             }
         })
 
-        if (isEmptyField) {
-            console.log("[X] Empty field found")
+        if (isInvalid) {
+            console.log("[X] Invalid field found")
             return
         }
 

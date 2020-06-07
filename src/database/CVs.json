@@ -1,11 +1,5 @@
 {
-  "displayName": "CV's",
-  "permissions": {
-    "insert": "anyone",
-    "update": "admin",
-    "remove": "admin",
-    "read": "admin"
-  },
+  "displayName": "CVs",
   "allowedOperations": [
     "count",
     "get",
@@ -21,22 +15,14 @@
   "fields": {
     "student": {
       "displayName": "Student",
-      "sortable": true,
+      "sortable": false,
       "referencedCollection": "StudentAccountsInfo",
       "referencingDisplayName": "CVs",
       "isDeleted": false,
       "systemField": false,
       "referencingFieldKey": "CVs",
       "type": "multi-reference",
-      "index": 12
-    },
-    "searchedForJob": {
-      "displayName": "Searched for Job",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 8
+      "index": 4
     },
     "_id": {
       "displayName": "ID",
@@ -44,7 +30,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "text",
-      "index": 1
+      "index": 0
     },
     "_owner": {
       "displayName": "Owner",
@@ -52,7 +38,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "text",
-      "index": 2
+      "index": 3
     },
     "_createdDate": {
       "displayName": "Created Date",
@@ -60,18 +46,18 @@
       "isDeleted": false,
       "systemField": true,
       "type": "datetime",
-      "index": 3
+      "index": 1
     },
     "studentExperiences": {
       "displayName": "Student Experiences",
-      "sortable": true,
+      "sortable": false,
       "referencedCollection": "StudentExperiences",
       "referencingDisplayName": "CVs-2",
       "isDeleted": true,
       "systemField": false,
       "referencingFieldKey": "CVs-2",
       "type": "multi-reference",
-      "index": 11
+      "index": 5
     },
     "_updatedDate": {
       "displayName": "Updated Date",
@@ -79,71 +65,7 @@
       "isDeleted": false,
       "systemField": true,
       "type": "datetime",
-      "index": 4
-    },
-    "timeInNl": {
-      "displayName": "Time in NL",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 9
-    },
-    "motivation": {
-      "displayName": "Motivation",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 7
-    },
-    "heardAboutUs": {
-      "displayName": "Heard About Us",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 10
-    },
-    "qualifications": {
-      "displayName": "Qualifications",
-      "sortable": true,
-      "isDeleted": true,
-      "systemField": false,
-      "type": "array",
-      "index": 13
-    },
-    "desiredContract": {
-      "displayName": "Desired Contract",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 6
-    },
-    "weeklyHours": {
-      "displayName": "Weekly Hours",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "number",
-      "index": 5
-    },
-    "title": {
-      "displayName": "Title",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 0
-    },
-    "experiences": {
-      "displayName": "Experiences",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "array",
-      "index": 14
+      "index": 2
     }
   },
   "displayField": "title",
