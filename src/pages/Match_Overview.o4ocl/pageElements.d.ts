@@ -12,7 +12,6 @@ type PageElementsMap = {
   "#dataset1": $w.dataset;
   "#text73": $w.Text;
   "#repeater1": $w.Repeater;
-<<<<<<< HEAD
   "#container": $w.Container;
   "#StudentFirstName": $w.Text;
   "#adressStudent": $w.Text;
@@ -20,14 +19,6 @@ type PageElementsMap = {
   "#emailStudent": $w.Text;
   "#iEmail": $w.TextInput;
   "#hiddenID": $w.Text;
-=======
-  "#container2": $w.Container;
-  "#StudentName": $w.Text;
-  "#box1": $w.Box;
-  "#qualificationsStudent": $w.Text;
-  "#vectorImage2": $w.VectorImage;
-  "#descriptionStudent": $w.Text;
->>>>>>> fd036174286879781cd665e353e4616dd726e56a
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
