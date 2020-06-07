@@ -1,8 +1,9 @@
 const use = require('@tensorflow-models/universal-sentence-encoder');
+import wixData from 'wix-data';
 
 
 
-export async function getScore(qualifications, experiences) {
+async function getScore(qualifications, experiences) {
     const qualifications_and_experiences = qualifications.concat(experiences)
     const model = await use.load()
 
@@ -42,3 +43,92 @@ export async function getScore(qualifications, experiences) {
     const average = (array) => array.reduce((a, b) => a + b) / qualifications.length
     return average(scores)
 }
+
+
+
+// SINGLE student matching to ALL vacancy.
+export async function matchStudent(arrayOfExperiences, cv_id) {
+    const THRESHOLD = 0.6;
+    wixData.query("Vacancies")
+        .find()
+        .then(async (results) => {
+            if (results.items.length > 0) {
+                let arrayOfMatches = [];
+                for (let i = 0; i < results.length; i++) {
+
+                    const vacancy = results.items[i];
+                    const qualifications = vacancy.qualifications;
+
+                    let arrayOfQualifications = [];
+                    let arrayOfHowLong = [];
+
+
+                    for (let j = 0; j < qualifications.length; j++) {
+                        arrayOfQualifications.push(qualifications[j]["qualification"]);
+                        arrayOfHowLong.push(qualifications[j]["howLong"]);
+                    }
+
+                    // TODO: This code below block should be on the overview page for R'Cruit
+
+
+                    await getScore(arrayOfQualifications, arrayOfExperiences).then(score => {
+                        console.log(`The % match is: ${score * 100}%`);
+
+                        if (score > THRESHOLD) {
+                            arrayOfMatches.push(vacancy._id)
+                        }
+                    }).catch((err) => {
+                        console.log(err);
+                    })
+
+                    // TODO: This code block above should be on the overview page for R'Cruit
+
+                }
+
+                let matchingData = {
+                    "_id": cv_id,
+                    "cvReference": cv_id
+                };
+
+                wixData.save("MatchingData", matchingData)
+                    .then((results) => {
+                        wixData.replaceReferences("MatchingData", "vacancyReference", cv_id, arrayOfMatches)
+                            .then(() => {
+                                console.log("Vacancy matches updated!");
+                            })
+                            .catch((error) => {
+                                console.log(error);
+                            });
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    })
+
+
+            } else {
+                console.log("No vacancy match found.")
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+}
+
+
+
+
+
+
+//// VOORBEELD VAN FUNCTION ////
+const experiences = [
+    "Lots of experience with Java coding",
+    "My friends find me quite funny",
+    "I happen to be known as a good chef",
+    "I have been a cook at Happy Italy"
+]
+
+// Dit is de ID van een CV in de "CVs" database.
+// _id - 344033b4-f08c-4dfd-b39e-6613a6d38b06
+matchStudent(experiences, "9ec171cd-39dd-4785-9873-16d60439b7c2").then(result => {
+    console.log("Finished, check to see if all went well.")
+});
