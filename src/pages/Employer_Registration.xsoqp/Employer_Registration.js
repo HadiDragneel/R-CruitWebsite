@@ -35,6 +35,8 @@ $w.onReady(function () {
         let email = $w('#email').value;
         let password = $w('#password').value;
         let companyName = $w('#companyName').value;
+        let address = $w('#address').value;
+        let phoneNumber = $w('#phoneNumber').value;
 
         wixUsers.register(email, password, {
             contactInfo: {
@@ -42,7 +44,25 @@ $w.onReady(function () {
             }
         });
 
-        $w('#companyDataset').save(); // Saves extra info to the "CompanyAccountInfo" database
+        let userId = wixUsers.currentUser.id;
+
+        let toInsert = {
+            "title": email,
+            "_id": userId,
+            "companyName": companyName,
+            "address": address,
+            "phoneNumber": phoneNumber
+        }
+
+        wixData.insert("CompanyAccountsInfo", toInsert)
+        .then( (results) => {
+            let item = results; //see item below
+        } )
+        .catch( (err) => {
+            let errorMsg = err;
+        } );
+
+        //$w('#companyDataset').save(); // Saves extra info to the "CompanyAccountInfo" database
         wixLocation.to('/home'); // Redirects to home page
 
 
