@@ -59,6 +59,7 @@ $w.onReady(function () {
 
         if (isInvalid) {
             console.log("[X] Invalid field found")
+            $w("#text75").show()
             return
         }
 
@@ -91,12 +92,14 @@ $w.onReady(function () {
                 wixData.insertReference("Vacancies", "CompanyAccountsInfo-1", results._id, user.id)
                     .then(() => {
                             console.log("[X] Inserted reference now too")
+                            $w("#text75").hide()
                             $w("#text73").show()
                         }
                     )
             })
             .catch((error) => {
                 console.log("[X] And error occurred", error);
+                $w("#text75").hide()
                 $w("#text74").show()
             });
     })

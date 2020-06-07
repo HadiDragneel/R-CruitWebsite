@@ -56,6 +56,7 @@ $w.onReady(function () {
 
             if (isInvalid) {
                 console.log("[X] Invalid field found")
+                $w("#text79").show()
                 return
             }
 
@@ -91,11 +92,13 @@ $w.onReady(function () {
                     wixData.insertReference("CVs", "student", results._id, user.id)
                         .then(() => {
                             console.log("[X] Inserted reference now too")
+                            $w("#text79").hide()
                             $w("#text78").show()
                         })
                 })
                 .catch((error) => {
                     console.log("[X] And error occurred", error);
+                    $w("#text75").hide()
                     $w("#text74").show()
                 });
 

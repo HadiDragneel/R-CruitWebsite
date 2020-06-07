@@ -18,6 +18,7 @@ type PageElementsMap = {
   "#text74": $w.Text;
   "#text73": $w.Text;
   "#vectorImage1": $w.VectorImage;
+  "#text75": $w.Text;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
