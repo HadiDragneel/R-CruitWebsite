@@ -54,7 +54,10 @@ $w.onReady(function () {
                 "lastName": lastName
             }
             
+        }).then((result) => {
+            console.log("Now entering then() function");
         })
+
 
         let user = wixUsers.currentUser;
 
@@ -63,27 +66,27 @@ $w.onReady(function () {
 
 
         let toInsert = {
-            "title": email,
-            "_id": userId,
-            "firstName": firstName,
-            "lastName": lastName,
-            "address": address,
-            "dateOfBirth": dateOfBirth,
-            "phoneNumber": phoneNumber,
-            "nationality": nationality
-        }
+                    "title": email,
+                    "_id": userId,
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "address": address,
+                    "dateOfBirth": dateOfBirth,
+                    "phoneNumber": phoneNumber,
+                    "nationality": nationality
+                }
 
-        wixData.insert("StudentAccountsInfo", toInsert)
-            .then( (results) => {
-                let item = results; //see item below
-            } )
-            .catch( (err) => {
-                let errorMsg = err;
-            } );
-        //Saves the additional info to database then redirects to part 2 of registration
+                wixData.insert("StudentAccountsInfo", toInsert)
+                    .then( (results) => {
+                        let item = results; //see item below
+                    } )
+                    .catch( (err) => {
+                        let errorMsg = err;
+                    } );
+                //Saves the additional info to database then redirects to part 2 of registration
 
-        //Redirects user to another page, in this case CV creation page
-        wixLocation.to("/student-registration-p2");
+                //Redirects user to another page, in this case CV creation page
+                wixLocation.to("/student-registration-p2");
 
     }
 

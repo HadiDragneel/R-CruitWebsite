@@ -52,7 +52,7 @@ $w.onReady(function () {
 
         inputFields.forEach(field => {
             // TODO: Check for white space too
-            if (field.value === "") {
+            if (field.valid) {
                 isEmptyField = true
             }
         })
