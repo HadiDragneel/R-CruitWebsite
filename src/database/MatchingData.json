@@ -55,15 +55,17 @@
       "displayName": "Vacancy Reference",
       "sortable": true,
       "referencedCollection": "Vacancies",
+      "referencingDisplayName": "MatchingData",
       "isDeleted": false,
       "systemField": false,
-      "type": "reference",
+      "referencingFieldKey": "MatchingData",
+      "type": "multi-reference",
       "index": 6
     },
     "match": {
       "displayName": "%Match",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "number",
       "index": 9
@@ -71,7 +73,7 @@
     "qualifications": {
       "displayName": "Qualifications",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "array",
       "index": 7
@@ -96,7 +98,7 @@
     "experiences": {
       "displayName": "Experiences",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "array",
       "index": 8

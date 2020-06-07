@@ -1,9 +1,8 @@
-import {denseModel} from 'backend/tensorFlowDemo';
+import {getScore} from 'backend/model';
+import wixData from 'wix-data';
 
-$w.onReady(function () {
-    denseModel().then(model => {
-        console.log("[X] Model: ", model)
-    }, error => {
-        console.log("[X] Error: ", error)
-    })
+$w.onReady(async function () {
+
+
+
 });

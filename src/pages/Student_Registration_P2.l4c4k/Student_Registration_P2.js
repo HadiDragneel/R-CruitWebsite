@@ -64,8 +64,8 @@ $w.onReady(function () {
                 if ($item("#input8").value !== "") {
                     experiences.push(
                         {
-                            ["experience" + index.toString()]: $item("#input8").value,
-                            ["howLong" + index.toString()]: $item("#input9").value
+                            "experience": $item("#input8").value,
+                            "howLong": $item("#input9").value
                         }
                     )
                 }
@@ -89,10 +89,14 @@ $w.onReady(function () {
                     //  broken because the current user its id is not in the StudentAccountsInfo data collection
                     //  this needs to be fixed
                     wixData.insertReference("CVs", "student", results._id, user.id)
-                        .then(() => console.log("[X] Inserted reference now too"))
+                        .then(() => {
+                            console.log("[X] Inserted reference now too")
+                            $w("#text76").show()
+                        })
                 })
                 .catch((error) => {
                     console.log("[X] And error occurred", error);
+                    $w("#text77").show()
                 });
 
             let jump = false;
