@@ -1,9 +1,15 @@
 import wixData from "wix-data";
+<<<<<<< HEAD
 import { session } from 'wix-storage';
 import wixWindow from 'wix-window';
 
 $w.onReady( () => {
   /*$w("#dataset1").onReady( () => {
+=======
+
+$w.onReady( () => {
+  $w("#dataset1").onReady( () => {
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
 
     $w("#repeater1").onItemReady( ($item, itemData, index) => {
       let theItem = itemData.jobDescription;
@@ -11,11 +17,19 @@ $w.onReady( () => {
       $item("#descriptionStudent").text = shortDescription + "...";
     });
 
+<<<<<<< HEAD
   } );*/
     
   
     
     ;
+=======
+  } );
+    
+  
+    
+    
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
     
     
     let debounceTimer;
@@ -24,11 +38,15 @@ $w.onReady( () => {
     let lastCreateLast;
     let lastUpdateFirst;
     let lastUpdateLast;
+<<<<<<< HEAD
     let lastEmail;
+=======
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
     
     
 
 $w("#datePicker1").onChange( (event) => {  
+<<<<<<< HEAD
           filter(lastFilterTitle, $w('#datePicker1').value, $w('#datePicker2').value, lastUpdateFirst, lastUpdateLast, lastEmail);
   });  
 $w("#datePicker2").onChange( (event) => {  
@@ -40,6 +58,20 @@ $w("#datePicker3").onChange( (event) => {
   });
 $w("#datePicker4").onChange( (event) => {  
           filter(lastFilterTitle, lastCreateFirst, lastCreateLast, lastUpdateFirst, $w('#datePicker4').value, lastEmail);
+=======
+          filter(lastFilterTitle, $w('#datePicker1').value, $w('#datePicker2').value, lastUpdateFirst, lastUpdateLast);
+  });
+    
+$w("#datePicker2").onChange( (event) => {  
+          filter(lastFilterTitle, $w('#datePicker1').value, $w('#datePicker2').value, lastUpdateFirst, lastUpdateLast);
+      
+  });
+$w("#datePicker3").onChange( (event) => {  
+          filter(lastFilterTitle, lastCreateFirst, lastCreateLast, $w('#datePicker3').value, lastUpdateLast);
+  });
+$w("#datePicker4").onChange( (event) => {  
+          filter(lastFilterTitle, lastCreateFirst, lastCreateLast, lastUpdateFirst, $w('#datePicker4').value);
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
   });
     
     
@@ -50,6 +82,7 @@ $w("#datePicker4").onChange( (event) => {
       }
       
         debounceTimer = setTimeout(() => {
+<<<<<<< HEAD
             filter($w('#IStudent').value, $w('#datePicker1').value, $w('#datePicker2').value, lastUpdateFirst, lastUpdateLast, lastEmail);
         }, 200);
   });    
@@ -75,6 +108,18 @@ $w("#datePicker4").onChange( (event) => {
             let newFilter = wixData.filter();
             if (firstname){
                 newFilter = newFilter.contains('firstName', firstname);
+=======
+            filter($w('#IStudent').value, $w('#datePicker1').value, $w('#datePicker2').value, lastUpdateFirst, lastUpdateLast);
+        }, 200);
+    } );    
+    
+    
+    function filter(company, createFirst, createLast, updateFirst, updateLast){
+        if (lastFilterTitle !== company || lastCreateFirst !== createFirst || lastCreateLast !== createLast || lastUpdateFirst !== updateFirst || lastUpdateLast !== updateLast) {
+            let newFilter = wixData.filter();
+            if (company){
+                newFilter = newFilter.contains('title', company);
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
             }
             if (createFirst || createLast){
                 newFilter = newFilter.between("_createdDate",createFirst, createLast);
@@ -82,20 +127,28 @@ $w("#datePicker4").onChange( (event) => {
             if (updateFirst || updateLast){
                 newFilter = newFilter.between("_updatedDate",updateFirst, updateLast);
             }
+<<<<<<< HEAD
             console.log(email);
             if (email) {
                 newFilter = newFilter.contains('title', email);
                 console.log("email");
             }
+=======
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
             
             
             
             $w('#dataset1').setFilter(newFilter);
+<<<<<<< HEAD
             lastFilterTitle = firstname;
+=======
+            lastFilterTitle = company;
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
             lastCreateFirst = createFirst;
             lastCreateLast = createLast;
             lastUpdateFirst = updateFirst;
             lastUpdateLast = updateLast;
+<<<<<<< HEAD
             lastEmail = email;
         }
     }
@@ -108,6 +161,11 @@ $w("#datePicker4").onChange( (event) => {
         });
       
     });
+=======
+        }
+    }
+    
+>>>>>>> fd036174286879781cd665e353e4616dd726e56a
 
   
 } );
