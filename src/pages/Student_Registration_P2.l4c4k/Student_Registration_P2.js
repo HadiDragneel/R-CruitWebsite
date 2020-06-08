@@ -45,23 +45,24 @@ $w.onReady(function () {
 
     $w("#submitButton").onClick((event) => {
 
-            let isEmptyField = false
+            let isInvalid = false
 
             inputFields.forEach(field => {
                 // TODO: Check for white space too
-                if (field.value === "") {
-                    isEmptyField = true
+                if (!field.valid) {
+                    isInvalid = true
                 }
             })
 
-            if (isEmptyField) {
-                console.log("[X] Empty field found")
+            if (isInvalid) {
+                console.log("[X] Invalid field found")
+                $w("#text79").show()
                 return
             }
 
             $w("#repeater1").forEachItem(($item, itemData, index) => {
 
-                if ($item("#input8").value !== "") {
+                if ($item("#input8").valid) {
                     experiences.push(
                         {
                             "experience": $item("#input8").value,
@@ -91,12 +92,14 @@ $w.onReady(function () {
                     wixData.insertReference("CVs", "student", results._id, user.id)
                         .then(() => {
                             console.log("[X] Inserted reference now too")
-                            $w("#text76").show()
+                            $w("#text79").hide()
+                            $w("#text78").show()
                         })
                 })
                 .catch((error) => {
                     console.log("[X] And error occurred", error);
-                    $w("#text77").show()
+                    $w("#text75").hide()
+                    $w("#text74").show()
                 });
 
             let jump = false;

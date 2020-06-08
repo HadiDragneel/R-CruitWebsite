@@ -43,7 +43,7 @@ $w.onReady(function () {
     });
 
     $w("#button4").onClick(event => {
-        let isEmptyField = false
+        let isInvalid = false
 
         if (!$w("#checkbox1").checked) {
             console.log("[X] Checkbox not checked")
@@ -52,13 +52,14 @@ $w.onReady(function () {
 
         inputFields.forEach(field => {
             // TODO: Check for white space too
-            if (field.value === "") {
-                isEmptyField = true
+            if (!field.valid) {
+                isInvalid = true
             }
         })
 
-        if (isEmptyField) {
-            console.log("[X] Empty field found")
+        if (isInvalid) {
+            console.log("[X] Invalid field found")
+            $w("#text75").show()
             return
         }
 
@@ -91,12 +92,14 @@ $w.onReady(function () {
                 wixData.insertReference("Vacancies", "CompanyAccountsInfo-1", results._id, user.id)
                     .then(() => {
                             console.log("[X] Inserted reference now too")
+                            $w("#text75").hide()
                             $w("#text73").show()
                         }
                     )
             })
             .catch((error) => {
                 console.log("[X] And error occurred", error);
+                $w("#text75").hide()
                 $w("#text74").show()
             });
     })
