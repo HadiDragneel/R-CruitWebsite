@@ -4,6 +4,7 @@ type PageElementsMap = {
   "#text73": $w.Text;
   "#addWorkButton": $w.Button;
   "#removeWorkButton": $w.Button;
+  "#dataset1": $w.dataset;
   "#repeater1": $w.Repeater;
   "#container2": $w.Container;
   "#input8": $w.TextInput;
@@ -17,10 +18,9 @@ type PageElementsMap = {
   "#text75": $w.Text;
   "#radioGroup1": $w.RadioButtonGroup;
   "#submitButton": $w.Button;
-  "#vectorImage1": $w.VectorImage;
-  "#dataset1": $w.dataset;
-  "#text74": $w.Text;
   "#text78": $w.Text;
+  "#text74": $w.Text;
+  "#vectorImage1": $w.VectorImage;
   "#text79": $w.Text;
   "#header1": $w.Header;
   "#image2": $w.Image;
