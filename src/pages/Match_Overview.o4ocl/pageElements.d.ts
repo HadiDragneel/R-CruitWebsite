@@ -17,8 +17,8 @@ type PageElementsMap = {
   "#adressStudent": $w.Text;
   "#matchInformation": $w.VectorImage;
   "#emailStudent": $w.Text;
-  "#iEmail": $w.TextInput;
   "#hiddenID": $w.Text;
+  "#iEmail": $w.TextInput;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;

@@ -68,9 +68,7 @@ $w("#datePicker4").onChange( (event) => {
     
     
     function filter(firstname, createFirst, createLast, updateFirst, updateLast, email) {
-        console.log("run function");
         if (lastFilterTitle !== firstname || lastCreateFirst !== createFirst || lastCreateLast !== createLast || lastUpdateFirst !== updateFirst || lastUpdateLast !== updateLast || lastEmail !== email) {
-            console.log("continue function");
 
             let newFilter = wixData.filter();
             if (firstname){
@@ -82,10 +80,8 @@ $w("#datePicker4").onChange( (event) => {
             if (updateFirst || updateLast){
                 newFilter = newFilter.between("_updatedDate",updateFirst, updateLast);
             }
-            console.log(email);
             if (email) {
                 newFilter = newFilter.contains('title', email);
-                console.log("email");
             }
             
             
