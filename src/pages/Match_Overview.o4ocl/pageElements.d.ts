@@ -1,23 +1,23 @@
 type PageElementsMap = {
   "#page1": $w.Page;
-  "#line2": $w.HiddenCollapsedElement;
   "#text72": $w.Text;
   "#IStudent": $w.TextInput;
+  "#iEmail": $w.TextInput;
+  "#line2": $w.HiddenCollapsedElement;
+  "#dataset1": $w.dataset;
   "#datePicker1": $w.DatePicker;
   "#datePicker2": $w.DatePicker;
   "#datePicker3": $w.DatePicker;
   "#datePicker4": $w.DatePicker;
   "#line1": $w.HiddenCollapsedElement;
-  "#dataset1": $w.dataset;
   "#text73": $w.Text;
   "#repeater1": $w.Repeater;
   "#container": $w.Container;
   "#StudentFirstName": $w.Text;
+  "#hiddenID": $w.Text;
   "#adressStudent": $w.Text;
   "#matchInformation": $w.VectorImage;
   "#emailStudent": $w.Text;
-  "#hiddenID": $w.Text;
-  "#iEmail": $w.TextInput;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;

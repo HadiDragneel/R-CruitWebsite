@@ -1,10 +1,11 @@
 import wixData from "wix-data";
 import { session } from 'wix-storage';
 import wixWindow from 'wix-window';
+import wixLocation from 'wix-location';
 import { matchStudent } from "backend/model.jsw";
 
-
 async function updateFields(userId) {
+    console.log("Updating fields");
     wixData.query("StudentAccountsInfo")
         .eq("_id", userId)
         .include("CVs")
@@ -23,6 +24,7 @@ async function updateFields(userId) {
                     .include("vacancyReference")
                     .find()
                     .then((results) => {
+                        console.log(results.items.length);
                         if (results.items.length > 0) {
                             let items = results.items;
                             $w("#repeater1").data = exampleData.slice(0, items[0].vacancyReference.length);
@@ -42,7 +44,10 @@ async function updateFields(userId) {
                             //$w("#text76").text = item.vacancyReference[0].jobDescription;
                             //console.log(item.vacancyReference[0].title);
                         } else {
-                            console.log("no result 2");
+                            $w("#repeater1").forEachItem(($item, itemData, index) => {
+                                $item("#text75").text = "No matches yet, please click on 'Update' to generate matches!";
+                                $item("#text76").text = "";
+                            });
                         }
                     })
                     .catch((error) => {
@@ -87,6 +92,7 @@ $w.onReady(() => {
     const experiences = []
 
     $w("#UpdateMatchesButton").onClick((event, $w) => {
+        $w("#UpdateMatchesButton").disable();
         let cvID = session.getItem("cvID");
 
         wixData.query("CVs")
@@ -99,10 +105,10 @@ $w.onReady(() => {
                     });
 
                     console.log("Start processing...");
-                    $w("#UpdateMatchesButton").disable();
+                    
                     matchStudent(experiences, cvID).then(result => {
                         console.log("Finished, check to see if all went well.")
-                        updateFields(userId);
+                        wixLocation.to(wixLocation.url);
                         $w("#UpdateMatchesButton").enable();
                     });
 
