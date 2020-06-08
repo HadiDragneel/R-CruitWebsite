@@ -1,6 +1,5 @@
 type PageElementsMap = {
   "#page1": $w.Page;
-  "#vectorImage1": $w.VectorImage;
   "#line2": $w.HiddenCollapsedElement;
   "#text72": $w.Text;
   "#IStudent": $w.TextInput;

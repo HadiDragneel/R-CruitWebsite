@@ -30,6 +30,7 @@ async function updateFields(userId) {
                             $w("#repeater1").forEachItem(($item, itemData, index) => {
                                 $item("#text75").text = items[0].vacancyReference[index].title;
                                 $item("#text76").text = items[0].vacancyReference[index].jobDescription;
+                                $item("#hiddenID").text = items[0].vacancyReference[index]._id;
 
                             });
 
@@ -98,8 +99,11 @@ $w.onReady(() => {
                     });
 
                     console.log("Start processing...");
+                    $w("#UpdateMatchesButton").disable();
                     matchStudent(experiences, cvID).then(result => {
                         console.log("Finished, check to see if all went well.")
+                        updateFields(userId);
+                        $w("#UpdateMatchesButton").enable();
                     });
 
 
@@ -108,8 +112,14 @@ $w.onReady(() => {
                     console.log("no resulkt");
                 }
             });
+    });
 
-
+    $w("#repeater1").onItemReady(($w, itemData, index) => {
+        $w("#vacancyInformation").onClick((event, $w) => {
+            session.setItem("vacancyID", $w("#hiddenID").text);
+            wixWindow.openLightbox("Vacancy");
+        });
+      
     });
 
     

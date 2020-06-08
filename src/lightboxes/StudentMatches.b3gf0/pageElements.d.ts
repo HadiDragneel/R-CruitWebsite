@@ -10,4 +10,8 @@ type PageElementsMap = {
   "#container2": $w.Container;
   "#text75": $w.Text;
   "#text76": $w.Text;
+  "#line1": $w.HiddenCollapsedElement;
+  "#line2": $w.HiddenCollapsedElement;
+  "#vacancyInformation": $w.VectorImage;
+  "#hiddenID": $w.Text;
 }
