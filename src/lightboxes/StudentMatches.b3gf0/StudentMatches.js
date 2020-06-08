@@ -1,7 +1,11 @@
 import wixData from "wix-data";
 import { session } from 'wix-storage';
 import wixWindow from 'wix-window';
+<<<<<<< HEAD
 //import { matchStudent } from "backend/model.jsw";
+=======
+import { matchStudent } from "backend/model.jsw";
+>>>>>>> e1684b8fff4e6aa3a7ac974507c38134d3606239
 const use = require('@tensorflow-models/universal-sentence-encoder');
 
 

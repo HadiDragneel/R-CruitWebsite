@@ -1,11 +1,10 @@
+import wixWindow from 'wix-window';
 import wixData from 'wix-data';
 import wixUsers from 'wix-users';
 import wixLocation from 'wix-location';
-import {matchStudent} from 'backend/model';
 
 
 $w.onReady(function () {
-
 
     //Disables the submission button until ToS has been agreed
     $w('#submitButton').disable();
@@ -23,14 +22,18 @@ $w.onReady(function () {
     //Submit button function
     $w('#submitButton').onClick((event) => {
 
+        //let hadiUserID = "eec88993-fa00-49bb-81b3-b4e8bd8c80e3";
+        let userID = "eec88993-fa00-49bb-81b3-b4e8bd8c80e3"; // Hadi's user ID, temporary for testing
+
         //Checks if all fields have been filled in
+        //var IDInUse = checkID();
         if ($w('#firstNameInput').valid && $w('#lastNameInput').valid && $w('#addressInput').valid && $w('#dateofbirthInput').valid && $w('#phoneInput').valid && $w('#nationalityInput').valid && $w('#emailInput').valid && $w('#passwordInput').valid) {
             registerStudentAccount()
-        }
-        else {
+            studentRegistrationNotification(userID)
+        } else {
             console.log("Not all fields filled in");
         }
-    });
+    })
 
     function registerStudentAccount() {
 
@@ -38,6 +41,11 @@ $w.onReady(function () {
         let password = $w("#passwordInput").value;
         let firstName = $w("#firstNameInput").value;
         let lastName = $w("#lastNameInput").value;
+        //let userID = $w("#IDInput").value;
+        let address = $w('#addressInput').value;
+        let dateOfBirth = $w('#dateofbirthInput').value;
+        let phoneNumber = $w('#phoneInput').value;
+        let nationality = $w('#nationalityInput').value;
 
         // registers an account with the email, password and name given as wix member of the site.
         wixUsers.register(email, password, {
@@ -45,20 +53,57 @@ $w.onReady(function () {
                 "firstName": firstName,
                 "lastName": lastName
             }
-        });
 
+        }).then((result) => {
+            console.log("Now entering then() function");
+        })
+
+
+        let user = wixUsers.currentUser;
+
+        let userId = user.id;
+        console.log(userId);
+
+
+        let toInsert = {
+            "title": email,
+            "_id": userId,
+            "firstName": firstName,
+            "lastName": lastName,
+            "address": address,
+            "dateOfBirth": dateOfBirth,
+            "phoneNumber": phoneNumber,
+            "nationality": nationality
+        }
+
+        wixData.insert("StudentAccountsInfo", toInsert)
+            .then((results) => {
+                let item = results; //see item below
+            })
+            .catch((err) => {
+                let errorMsg = err;
+            });
         //Saves the additional info to database then redirects to part 2 of registration
-        $w('#studentAccountInfoDataset').save();
+
         //Redirects user to another page, in this case CV creation page
         wixLocation.to("/student-registration-p2");
 
     }
-
-
 });
 
-
-
-
-
+function studentRegistrationNotification(userID) {
+    wixUsers.emailUser("studentRegistrationNotification", userID, {
+        variables: {
+            userName: $w("#firstNameInput").value
+        }
+    })
+        .then(() => {
+            console.log("email sent");
+            // do something after the email was sent successfully
+        })
+        .catch((err) => {
+            console.log(err);
+            // handle error that prevented the email from being sent
+        });
+}
 
