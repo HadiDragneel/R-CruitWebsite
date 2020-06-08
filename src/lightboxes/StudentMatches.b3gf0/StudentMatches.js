@@ -2,6 +2,15 @@ import wixData from "wix-data";
 import { session } from 'wix-storage';
 import wixWindow from 'wix-window';
 
+
+const exampleData = [
+    { "_id": "1"},
+    { "_id": "2" },
+    { "_id": "3" },
+    { "_id": "4" },
+    { "_id": "5" }
+];
+
 $w.onReady(() => {
     let userId = session.getItem("studentID");
 
@@ -24,9 +33,17 @@ $w.onReady(() => {
                     .then((results) => {
                         if (results.items.length > 0) {
                             let items = results.items;
+                            $w("#repeater1").data = exampleData.slice(0, items[0].vacancyReference.length);
 
-                            //items.forEach(item => );
-                            console.log($w("#repeater1").data);
+                            $w("#repeater1").forEachItem(($item, itemData, index) => {
+                                $item("#text75").text = items[0].vacancyReference[index].title;
+                                $item("#text76").text = items[0].vacancyReference[index].jobDescription;
+
+                            });
+
+
+                            
+
 
                             //$w("#text75").text = item.vacancyReference[0].title;
                             //$w("#text76").text = item.vacancyReference[0].jobDescription;
