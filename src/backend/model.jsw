@@ -114,21 +114,3 @@ export async function matchStudent(arrayOfExperiences, cv_id) {
         });
 }
 
-
-
-
-
-
-//// VOORBEELD VAN FUNCTION ////
-const experiences = [
-    "Lots of experience with Java coding",
-    "My friends find me quite funny",
-    "I happen to be known as a good chef",
-    "I have been a cook at Happy Italy"
-]
-
-// Dit is de ID van een CV in de "CVs" database.
-// _id - 344033b4-f08c-4dfd-b39e-6613a6d38b06
-matchStudent(experiences, "9ec171cd-39dd-4785-9873-16d60439b7c2").then(result => {
-    console.log("Finished, check to see if all went well.")
-});
