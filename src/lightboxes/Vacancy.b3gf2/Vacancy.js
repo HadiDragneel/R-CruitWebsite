@@ -29,6 +29,7 @@ $w.onReady(function () {
                 $w("#text72").text = items[0].title;
                 $w("#text76").text = items[0].jobDescription;
                 $w("#text78").text = items[0].hoursInWeek;
+                $w("#wageInfo").text = items[0].hourlyWage;
                 $w("#text77").text = items[0].studentsNeeded.toString();
                 $w("#text82").text = items[0]["CompanyAccountsInfo-1"][0]["companyName"];
                 $w("#text84").text = items[0]["CompanyAccountsInfo-1"][0]["title"];

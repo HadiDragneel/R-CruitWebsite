@@ -28,7 +28,9 @@ $w.onReady(function () {
         $w("#textBox1"),
         $w("#input8"),
         $w("#input16"),
-        $w("#input17")]
+        $w("#input17"),
+        $w("#wageInput")
+    ]
 
     $w("#repeater1").data = [];
 
@@ -80,6 +82,7 @@ $w.onReady(function () {
             "studentsNeeded": inputFields[2].value,
             "timeStudentsNeeded": inputFields[3].value,
             "hoursInWeek": inputFields[4].value,
+            "hourlyWage": inputFields[5].value,
             "qualifications": qualifications
         };
 

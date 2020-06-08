@@ -110,6 +110,14 @@
       "type": "multi-reference",
       "index": 6
     },
+    "hourlyWage": {
+      "displayName": "Hourly Wage",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 15
+    },
     "title": {
       "displayName": "Job Title",
       "sortable": true,
