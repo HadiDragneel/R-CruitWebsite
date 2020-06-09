@@ -1,4 +1,5 @@
 type PageElementsMap = {
+  "#page1": $w.Page;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
