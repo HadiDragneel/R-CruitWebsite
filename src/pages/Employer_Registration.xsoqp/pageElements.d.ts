@@ -1,8 +1,18 @@
 type PageElementsMap = {
+  "#page1": $w.Page;
+  "#text72": $w.Text;
+  "#companyName": $w.TextInput;
+  "#text75": $w.Text;
+  "#address": $w.AddressInput;
+  "#phoneNumber": $w.TextInput;
+  "#email": $w.TextInput;
+  "#password": $w.TextInput;
+  "#tosCheck": $w.Checkbox;
+  "#captcha1": $w.Captcha;
+  "#submitButton": $w.Button;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
-  "#accountNavBar1": $w.AccountNavBar;
   "#container1": $w.HiddenCollapsedElement;
   "#verticalMenu1": $w.Menu;
   "#profile1": $w.IFrame;

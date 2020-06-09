@@ -78,8 +78,11 @@ function submitToDatabase(email, companyName, address, phoneNumber) {
             let errorMsg = err;
         } );
 
+
     //Notifies R'Cruit about the new account that was just created
     companyRegistrationEmail(companyName);
+    wixLocation.to('/create_vacancy'); // Redirects to create vacancy
+
 
     // Redirects the user to another specified page
     wixLocation.to('/home'); // Redirects to home page
