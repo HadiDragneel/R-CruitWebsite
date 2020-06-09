@@ -85,7 +85,6 @@ $w.onReady(function () {
 
     $w("#addQualificationButton").onClick( (event) => {
         $w("#EditQualificationsRepeater").data = exampleData.slice(0, ++added);
-        console.log($w("#EditQualificationsRepeater").data);
     } );
 
     $w("#removeQualificationButton").onClick( (event) =>
@@ -98,16 +97,13 @@ $w.onReady(function () {
 
 
     $w("#changeConfirmation").onClick(event => {
-        console.log("1");
 
         let isInvalid = false
-        console.log("Clicked");
 
         inputFields.forEach(field => {
             // TODO: Check for white space too
             if (!field.valid) {
                 isInvalid = true
-                console.log("2");
 
             }
         })
@@ -120,8 +116,6 @@ $w.onReady(function () {
 
         $w("#EditQualificationsRepeater").forEachItem(($item, itemData, index) => {
             if ($item("#EditQualification").value !== "") {
-                console.log("3");
-
                 qualifications.push(
                     {
                         "qualification": $item("#EditQualification").value,
@@ -132,7 +126,6 @@ $w.onReady(function () {
                 ) 
             }
         });
-        console.log("4");
 
         let toInsert = {
             "_id" : session.getItem("vacancyID"),
@@ -144,7 +137,6 @@ $w.onReady(function () {
             "hourlyWage": inputFields[5].value,
             "qualifications": qualifications
         };
-        console.log(toInsert);
         wixData.save("Vacancies", toInsert)
             .then((results) => {
                 console.log("Success");
