@@ -91,8 +91,9 @@ $w.onReady(function () {
                 console.log("[X] Inserted all but reference")
                 // TODO: Check in published site if student reference is broken due to user.id now it is
                 //  broken because the current user its id is not in the EmployersAccountInfo data collection
-                //  this needs to be fixed 
-                wixData.insertReference("Vacancies", "CompanyAccountsInfo-1", results._id, user.id)
+                //  this needs to be fixed
+                let userID = user.id;
+                wixData.insertReference("Vacancies", "CompanyAccountsInfo-1", results._id, userID)
                     .then(() => {
                             console.log("[X] Inserted reference now too")
                             $w("#text75").hide()
