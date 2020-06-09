@@ -1,3 +1,10 @@
+import wixLocation from "wix-location";
+import {session} from 'wix-storage';
+import wixData from 'wix-data';
+
+
+
+
 $w.onReady( () => {
   $w("#dataset1").onReady( () => {
 
@@ -9,4 +16,9 @@ $w.onReady( () => {
 
   } );
   
+$w("#vectorImage2").onClick( (event, $w) => {
+  session.setItem("vacancyID", $w("#hiddenid").text);
+  // console.log( $w("#hiddenid").text);  
+  wixLocation.to("/editing-vacancy");
+} );
 } );
