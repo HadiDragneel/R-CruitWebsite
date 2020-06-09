@@ -1,4 +1,15 @@
 type PageElementsMap = {
+  "#page1": $w.Page;
+  "#columnStrip2": $w.ColumnStrip;
+  "#column2": $w.Column;
+  "#text2": $w.Text;
+  "#button1": $w.Button;
+  "#columnStrip1": $w.ColumnStrip;
+  "#column1": $w.Column;
+  "#text1": $w.Text;
+  "#text16": $w.Text;
+  "#image3": $w.Image;
+  "#button2": $w.Button;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
