@@ -19,11 +19,17 @@ $w.onReady(function () {
         }
     }));
 
-    $w('#submitButton').onClick((event) => {
+    $w('#submitButton').onClick(async (event) => {
         if ($w('#companyName').valid && $w('#address').valid && $w('#phoneNumber').valid && $w('#email').valid && $w('#password').valid) {
 
-            registerCompanyAccount()
-            companyRegistrationEmail("eec88993-fa00-49bb-81b3-b4e8bd8c80e3");
+            let email = $w('#email').value;
+            let password = $w('#password').value;
+            let companyName = $w('#companyName').value;
+            let address = $w('#address').value;
+            let phoneNumber = $w('#phoneNumber').value;
+
+            await registerCompanyAccount(email, password, companyName);
+            await submitToDatabase(email, companyName, address, phoneNumber);
 
         } else {
             console.log("Not all fields filled in");
@@ -31,31 +37,40 @@ $w.onReady(function () {
 
     });
 
-    function registerCompanyAccount() {
+    async function registerCompanyAccount(email, password, companyName) {
 
-        let email = $w('#email').value;
-        let password = $w('#password').value;
-        let companyName = $w('#companyName').value;
-        let address = $w('#address').value;
-        let phoneNumber = $w('#phoneNumber').value;
-
-        wixUsers.register(email, password, {
+        await wixUsers.register(email, password, {
             contactInfo: {
                 "firstName": companyName
             }
         });
 
-        let userId = wixUsers.currentUser.id;
+        await wixUsers.login(email, password)
+            .then( () => {
+                console.log("[X] User has been logged in.");
+            } )
+            .catch( (err) => {
+                console.log(err);
+            });
+    }
 
-        let toInsert = {
-            "title": email,
-            "_id": userId,
-            "companyName": companyName,
-            "address": address,
-            "phoneNumber": phoneNumber
-        }
+});
 
-        wixData.insert("CompanyAccountsInfo", toInsert)
+function submitToDatabase(email, companyName, address, phoneNumber) {
+    let user = wixUsers.currentUser;
+    let userId = user.id;
+
+    let toInsert = {
+        "title": email,
+        "_id": userId,
+        "companyName": companyName,
+        "address": address,
+        "phoneNumber": phoneNumber
+    }
+
+
+    // Inserts the company info from the form into companyAccountsInfo database
+    wixData.insert("CompanyAccountsInfo", toInsert)
         .then( (results) => {
             let item = results; //see item below
         } )
@@ -63,16 +78,20 @@ $w.onReady(function () {
             let errorMsg = err;
         } );
 
-        //$w('#companyDataset').save(); // Saves extra info to the "CompanyAccountInfo" database
-        wixLocation.to('/create_vacancy'); // Redirects to home page
+
+    //Notifies R'Cruit about the new account that was just created
+    companyRegistrationEmail(companyName);
+    wixLocation.to('/create_vacancy'); // Redirects to create vacancy
 
 
-    }
-});
-function companyRegistrationEmail(userID) {
-    wixUsers.emailUser('companyRegistrationNotification', userID, {
+    // Redirects the user to another specified page
+    wixLocation.to('/home'); // Redirects to home page
+}
+
+function companyRegistrationEmail(name) {
+    wixUsers.emailUser('companyRegistrationNotification', "eec88993-fa00-49bb-81b3-b4e8bd8c80e3", {
         variables: {
-            companyName: $w('#companyName').value
+            companyName: name
         }}).then((result)=>{
         console.log("email notification sent")
     }).catch((err)=>{
