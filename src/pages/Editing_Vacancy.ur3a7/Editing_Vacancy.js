@@ -77,7 +77,7 @@ $w.onReady(function () {
             .then(res => {
                 if (res === 'ok')
                     wixData.remove('Vacancies', session.getItem("vacancyID"));
-                    wixLocation.to("/vacancy-overview")
+                    wixLocation.to(session.getItem("Lastlocation").toString());
                     return null;
             });
     } );
@@ -142,7 +142,7 @@ $w.onReady(function () {
                 console.log("Success");
                 $w("#text74").hide()
                 $w("#text73").show()
-                wixLocation.to("/vacancy-overview");
+                wixLocation.to(session.getItem("Lastlocation").toString());
 
             })
             .catch((error) => {

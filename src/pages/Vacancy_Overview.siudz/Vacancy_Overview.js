@@ -24,6 +24,8 @@ $w.onReady( () => {
   
 $w("#vectorImage2").onClick( (event, $w) => {
   session.setItem("vacancyID", $w("#hiddenid").text);
+  
+  session.setItem("Lastlocation", ("/vacancy-overview"));  
   // console.log( $w("#hiddenid").text);  
   wixLocation.to("/editing-vacancy");
 } );
