@@ -64,7 +64,7 @@ $w.onReady(function () {
         } );
 
         //$w('#companyDataset').save(); // Saves extra info to the "CompanyAccountInfo" database
-        wixLocation.to('/home'); // Redirects to home page
+        wixLocation.to('/create_vacancy'); // Redirects to home page
 
 
     }

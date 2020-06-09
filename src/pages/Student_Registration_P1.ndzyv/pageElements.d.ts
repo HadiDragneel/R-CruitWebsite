@@ -1,19 +1,4 @@
 type PageElementsMap = {
-  "#page1": $w.Page;
-  "#text72": $w.Text;
-  "#text73": $w.Text;
-  "#firstNameInput": $w.TextInput;
-  "#lastNameInput": $w.TextInput;
-  "#text76": $w.Text;
-  "#addressInput": $w.AddressInput;
-  "#dateofbirthInput": $w.DatePicker;
-  "#phoneInput": $w.TextInput;
-  "#nationalityInput": $w.TextInput;
-  "#emailInput": $w.TextInput;
-  "#passwordInput": $w.TextInput;
-  "#captcha1": $w.Captcha;
-  "#tosCheck": $w.Checkbox;
-  "#submitButton": $w.Button;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;
