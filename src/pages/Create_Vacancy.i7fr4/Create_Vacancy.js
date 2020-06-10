@@ -1,6 +1,7 @@
 import wixWindow from 'wix-window';
 import wixUsers from 'wix-users';
-import wixData from 'wix-data'
+import wixData from 'wix-data';
+import {updatePermissions} from 'public/permission';
 
 const exampleData = [
     {"_id": "1"},
@@ -19,6 +20,8 @@ let added = 0;
 
 // TODO: Insert qualifications in data collection field of current user its created vacancy
 $w.onReady(function () {
+
+    updatePermissions();
 
     const qualifications = [];
     const user = wixUsers.currentUser;

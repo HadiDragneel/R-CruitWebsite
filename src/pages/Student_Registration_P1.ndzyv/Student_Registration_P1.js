@@ -3,9 +3,12 @@ import wixData from 'wix-data';
 import wixUsers from 'wix-users';
 import wixLocation from 'wix-location';
 import { session } from 'wix-storage';
+import {updatePermissions} from 'public/permission';
 
 
 $w.onReady(function () {
+
+    updatePermissions();
 
     //Disables the submission button until ToS has been agreed
     $w('#submitButton').disable();

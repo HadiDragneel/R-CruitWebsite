@@ -1,6 +1,7 @@
 import wixData from "wix-data";
 import {session} from 'wix-storage';
 import wixWindow from 'wix-window';
+import {updatePermissions} from 'public/permission';
 
 $w.onReady(() => {
     /*$w("#dataset1").onReady( () => {
@@ -11,11 +12,8 @@ $w.onReady(() => {
         $item("#descriptionStudent").text = shortDescription + "...";
       });
 
-    } );*/
-
-
-    ;
-
+  } );*/
+    updatePermissions();
 
     let debounceTimer;
     let lastFilterTitle;

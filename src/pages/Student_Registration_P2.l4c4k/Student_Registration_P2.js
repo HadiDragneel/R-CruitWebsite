@@ -1,6 +1,7 @@
 import wixWindow from 'wix-window';
 import wixUsers from 'wix-users';
-import wixData from 'wix-data'
+import wixData from 'wix-data';
+import {updatePermissions} from 'public/permission';
 
 
 const exampleData = [
@@ -19,6 +20,7 @@ const exampleData = [
 let added = 0;
 
 $w.onReady(function () {
+    updatePermissions();
 
     const experiences = [];
     const user = wixUsers.currentUser;
