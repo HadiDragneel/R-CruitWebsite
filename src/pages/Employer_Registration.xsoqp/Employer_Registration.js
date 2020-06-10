@@ -2,12 +2,16 @@ import wixUsers from 'wix-users';
 import wixLocation from 'wix-location';
 import wixWindow from 'wix-window';
 import wixData from 'wix-data';
+import {updatePermissions} from 'public/permission';
 
 
 $w.onReady(function () {
+
+    updatePermissions();
+
     //Disables the submission button until ToS has been agreed
     $w('#submitButton').disable();
-    
+
     //Check for ToS agreement. Makes submission enabled or disabled based on current checkbox status
     $w('#tosCheck').onChange((event => {
         let isAgreed = $w('#tosCheck').checked;

@@ -1,4 +1,5 @@
 import wixWindow from 'wix-window';
+import {updatePermissions} from 'public/permission';
 import wixData from 'wix-data';
 import { session } from 'wix-storage';
 import wixLocation from "wix-location";
@@ -25,6 +26,9 @@ let added = 0;
 
 
 $w.onReady(function () {
+
+    updatePermission();
+
     const inputFields = [
         $w("#EditJobTitle"),
         $w("#EditJobDescription"),
@@ -48,7 +52,7 @@ $w.onReady(function () {
                 $w("#EditDurationStudent").value = items[0].timeStudentsNeeded;
                 $w("#EditWeeklyHours").value = items[0].hoursInWeek;
                 $w("#EditHourlyWage").value = items[0].hourlyWage;
-                
+
 
                 $w("#EditQualificationsRepeater").data = Array.from(exampleData).splice(0, items[0].qualifications.length);
                 console.log($w("#EditQualificationsRepeater").data);
@@ -70,8 +74,10 @@ $w.onReady(function () {
 
 
 
+
+
     $w("#deleteVacancyButton").onClick( (event) => {
-        
+
         wixWindow.openLightbox('DeleteVacancyConfirmation')
             .then(res => {
                 if (res === 'ok')
@@ -127,7 +133,7 @@ $w.onReady(function () {
 
                     }
 
-                ) 
+                )
             }
         });
 

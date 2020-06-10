@@ -1,7 +1,18 @@
 import wixUsers from 'wix-users';
 import wixLocation from 'wix-location';
+import {updatePermissions} from 'public/permission';
+import {isLoggedIn} from "public/permission";
 
 $w.onReady(function(){
+
+    updatePermissions();
+
+    if (isLoggedIn) {
+        wixUsers.logout();
+        wixLocation.to('/home');
+    }
+
+
     $w('#LoginSubmit').onClick(function(){
         let email = $w('#LoginEmail').value;
         let password = $w('#LoginPassword').value;
@@ -15,7 +26,7 @@ $w.onReady(function(){
             $w("#text76").show();
         });
     })
-})
+});
 
 $w('#ForgotPasswordButton').onClick(function(){
     wixUsers.promptForgotPassword();

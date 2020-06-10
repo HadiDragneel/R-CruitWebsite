@@ -1,9 +1,13 @@
 import wixData from "wix-data";
+import {updatePermissions} from 'public/permission';
 import {session} from 'wix-storage';
 import wixLocation from "wix-location";
 
 
 $w.onReady( () => {
+
+  updatePermissions();
+
   $w("#dataset1").onReady( () => {
 
     $w("#repeater1").onItemReady( ($item, itemData, index) => {
@@ -84,7 +88,7 @@ $w("#datePicker4").onChange( (event) => {
     $w("#vectorImage2").onClick( (event, $w) => {
       session.setItem("vacancyID", $w("#hiddenid").text);
       // console.log( $w("#hiddenid").text);
-      session.setItem("Lastlocation", "/copy-of-vacancy-overview");  
+      session.setItem("Lastlocation", "/copy-of-vacancy-overview");
       wixLocation.to("/editing-vacancy");
     } );
 } );

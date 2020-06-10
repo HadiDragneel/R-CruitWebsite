@@ -1,3 +1,5 @@
+import {updatePermissions} from 'public/permission';
+
 import wixLocation from "wix-location";
 import {session} from 'wix-storage';
 import wixData from 'wix-data';
@@ -6,6 +8,8 @@ import wixUsers from 'wix-users';
 
 
 $w.onReady( () => {
+  updatePermissions();
+
   $w("#dataset1").onReady( () => {
     let user = wixUsers.currentUser;
     let userId = user.id;
@@ -21,12 +25,12 @@ $w.onReady( () => {
     });
 
   } );
-  
+
 $w("#vectorImage2").onClick( (event, $w) => {
   session.setItem("vacancyID", $w("#hiddenid").text);
-  
-  session.setItem("Lastlocation", ("/vacancy-overview"));  
-  // console.log( $w("#hiddenid").text);  
+
+  session.setItem("Lastlocation", ("/vacancy-overview"));
+  // console.log( $w("#hiddenid").text);
   wixLocation.to("/editing-vacancy");
 } );
 } );
