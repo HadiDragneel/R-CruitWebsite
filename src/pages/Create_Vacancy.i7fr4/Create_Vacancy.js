@@ -35,21 +35,29 @@ $w.onReady(function () {
     $w("#repeater1").data = [];
 
     $w("#button2").onClick((event) => {
-        $w("#repeater1").data = exampleData.slice(0, ++added);
+        if (added < exampleData.length) {
+            $w("#repeater1").data = exampleData.slice(0, ++added);
+        } else {
+            $w("#text76").show();
+        }
     });
 
     $w("#button3").onClick((event) => {
         if (added > 0) {
             $w("#repeater1").data = exampleData.slice(0, --added);
+            if ($w("#text76").hidden == false) { $w("#text76").hide(); }
         }
+
     });
 
     $w("#button4").onClick(event => {
         let isInvalid = false
 
         if (!$w("#checkbox1").checked) {
-            console.log("[X] Checkbox not checked")
+            $w("#text77").show();
             return
+        } else {
+            $w("#text77").hide();
         }
 
         inputFields.forEach(field => {
@@ -95,10 +103,10 @@ $w.onReady(function () {
                 let userID = user.id;
                 wixData.insertReference("Vacancies", "CompanyAccountsInfo-1", results._id, userID)
                     .then(() => {
-                            console.log("[X] Inserted reference now too")
-                            $w("#text75").hide()
-                            $w("#text73").show()
-                        }
+                        console.log("[X] Inserted reference now too")
+                        $w("#text75").hide()
+                        $w("#text73").show()
+                    }
                     )
             })
             .catch((error) => {
@@ -106,33 +114,8 @@ $w.onReady(function () {
                 $w("#text75").hide()
                 $w("#text74").show()
             });
-    })
+    });
 
-    $w("#button1").onClick((event) => {
-
-            let jump = false;
-
-            for (let x = 1; x < 14; x++) {
-                let validityObj = $w("#input" + x.toString()).validity;
-
-                if (validityObj.valid == false) {
-
-                    if (jump == false) {
-                        jump = true;
-                        $w("#input" + x.toString()).scrollTo()
-                            .then(() => {
-                                wixWindow.scrollBy(0, -100);
-                            });
-                    }
-
-                    $w("#input" + x.toString()).updateValidityIndication();
-                }
-
-            }
-
-
-        }
-    );
 
 
 });

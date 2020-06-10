@@ -28,6 +28,8 @@ $w.onReady(function () {
 
         //Checks if all fields have been filled in
         if ($w('#firstNameInput').valid && $w('#lastNameInput').valid && $w('#addressInput').valid && $w('#dateofbirthInput').valid && $w('#phoneInput').valid && $w('#nationalityInput').valid && $w('#emailInput').valid && $w('#passwordInput').valid) {
+            $w("#text77").hide();
+
 
             let email = $w("#emailInput").value;
             let password = $w("#passwordInput").value;
@@ -42,7 +44,9 @@ $w.onReady(function () {
             await submitToDatabase(email, firstName, lastName, address, dateOfBirth, phoneNumber, nationality);
 
         } else {
-            console.log("[X] Not all fields filled in.");
+            $w("#text77").text = "Please fill in all the required fields. (with an *)";
+            $w("#text77").show();
+            console.log("not filled in");
         }
     })
 
@@ -65,6 +69,8 @@ $w.onReady(function () {
             } )
             .catch( (err) => {
                 console.log(err);
+                $w("#text77").text = "There was an error creating your account, please try again or contact R'Cruit.";
+                $w("#text77").show();
             });
 
     }
@@ -99,6 +105,8 @@ async function submitToDatabase(email, firstName, lastName, address, dateOfBirth
         .catch((err) => {
             let errorMsg = err;
             console.log("[X] Could not save user in studentAccountsInfo", err);
+            $w("#text77").text = "There was an error creating your account, please try again or contact R'Cruit.";
+            $w("#text77").show();
         });
 
     // Notifies R'Cruit about new registration

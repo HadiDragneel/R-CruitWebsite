@@ -17,10 +17,7 @@ const exampleData = [
     {"_id": "7"},
     {"_id": "8"},
     {"_id": "9"},
-    {"_id": "10"},
-    {"_id": "11"},
-    {"_id": "12"},
-    {"_id": "13"}
+    {"_id": "10"}
 ];
 
 let added = 0;
@@ -53,18 +50,20 @@ $w.onReady(function () {
                 $w("#EditHourlyWage").value = items[0].hourlyWage;
                 
 
-                $w("#EditQualificationsRepeater").data = exampleData.splice(0, items[0].qualifications.length);
+                $w("#EditQualificationsRepeater").data = Array.from(exampleData).splice(0, items[0].qualifications.length);
+                console.log($w("#EditQualificationsRepeater").data);
+
                 $w("#EditQualificationsRepeater").forEachItem(($item, itemData, index) => {
                     added++;
                     $item("#EditQualification").value = items[0].qualifications[index]["qualification"];
                     $item("#EditHowLong").value = items[0].qualifications[index]["howLong"];
                     exampleData[index] = $w("#EditQualificationsRepeater").data[index];
                 });
-
+                console.log(exampleData);
 
 
             } else{
-                console.log(session.getItem("vacancyID"));
+                $w("#text77").show();
             }
           });
 
@@ -83,14 +82,19 @@ $w.onReady(function () {
     } );
 
 
-    $w("#addQualificationButton").onClick( (event) => {
-        $w("#EditQualificationsRepeater").data = exampleData.slice(0, ++added);
-    } );
+    $w("#addQualificationButton").onClick((event) => {
+        if (added < exampleData.length) {
+            $w("#EditQualificationsRepeater").data = Array.from(exampleData).splice(0, ++added);
+        } else {
+            $w("#text76").show();
+        }
+    });
 
     $w("#removeQualificationButton").onClick( (event) =>
         {
             if (added > 0) {
                 $w("#EditQualificationsRepeater").data = exampleData.slice(0, --added);
+                if ($w("#text76").hidden == false) { $w("#text76").hide(); }
             }
         }
     );

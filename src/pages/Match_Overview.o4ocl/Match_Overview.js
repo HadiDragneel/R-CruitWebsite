@@ -129,11 +129,12 @@ $w.onReady(() => {
                     }
 
                 } else {
-                    // handle case where no matching items found
+                    // handle case when no students are found -> why?
                 }
             })
             .catch((err) => {
-                console.log(err)
+                $w("#text100").text = "Something went wrong, please try again later.";
+                $w("#text100").show();
             });
 
         $w("#matchInformation").onClick((event, $w) => {

@@ -9,6 +9,11 @@ $w.onReady(function(){
         .then(()=>{
             wixLocation.to('/home');
         })
+        .catch((err) => {
+            let errorMsg = err;
+            $w("#text76").text = "The given email and password combination does not exist.";
+            $w("#text76").show();
+        });
     })
 })
 

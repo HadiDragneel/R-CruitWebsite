@@ -90,17 +90,6 @@
       "systemField": false,
       "type": "text",
       "index": 0
-    },
-    "vacancies": {
-      "displayName": "Vacancies",
-      "sortable": true,
-      "referencedCollection": "Vacancies",
-      "referencingDisplayName": "CompanyAccountsInfo-1",
-      "isDeleted": false,
-      "systemField": false,
-      "referencingFieldKey": "CompanyAccountsInfo-1",
-      "type": "multi-reference",
-      "index": 9
     }
   },
   "displayField": "title",

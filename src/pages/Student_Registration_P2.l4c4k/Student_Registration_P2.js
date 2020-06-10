@@ -33,7 +33,11 @@ $w.onReady(function () {
     $w("#repeater1").data = [];
 
     $w("#addWorkButton").onClick((event) => {
-        $w("#repeater1").data = exampleData.slice(0, ++added);
+        if (added < exampleData.length) {
+            $w("#repeater1").data = exampleData.slice(0, ++added);
+        } else {
+            $w("#text76").show();
+        }
     });
 
     $w("#removeWorkButton").onClick((event) => {

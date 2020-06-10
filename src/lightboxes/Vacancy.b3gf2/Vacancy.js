@@ -24,33 +24,43 @@ $w.onReady(function () {
          .include("CompanyAccountsInfo-1")
          .find()
          .then((results) => {
-            if (results.items.length > 0) {
-                let items = results.items;
-                $w("#text72").text = items[0].title;
-                $w("#text76").text = items[0].jobDescription;
-                $w("#text78").text = items[0].hoursInWeek;
-                $w("#wageInfo").text = items[0].hourlyWage;
-                $w("#text77").text = items[0].studentsNeeded.toString();
-                $w("#text82").text = items[0]["CompanyAccountsInfo-1"][0]["companyName"];
-                $w("#text84").text = items[0]["CompanyAccountsInfo-1"][0]["title"];
-                $w("#text87").text = items[0]["CompanyAccountsInfo-1"][0]["phoneNumber"];
-                $w("#text86").text = items[0]["CompanyAccountsInfo-1"][0]["address"]["formatted"];
+             if (results.items.length > 0) {
+                 let items = results.items;
+                 $w("#text72").text = items[0].title;
+                 $w("#text76").text = items[0].jobDescription;
+                 $w("#text78").text = items[0].hoursInWeek;
+                 $w("#wageInfo").text = items[0].hourlyWage;
+                 $w("#text77").text = items[0].studentsNeeded.toString();
+                 $w("#text82").text = items[0]["CompanyAccountsInfo-1"][0]["companyName"];
+                 $w("#text84").text = items[0]["CompanyAccountsInfo-1"][0]["title"];
+                 $w("#text87").text = items[0]["CompanyAccountsInfo-1"][0]["phoneNumber"];
+                 $w("#text86").text = items[0]["CompanyAccountsInfo-1"][0]["address"]["formatted"];
 
-                console.log(items[0]["CompanyAccountsInfo-1"][0]);
+                 console.log(items[0]["CompanyAccountsInfo-1"][0]);
 
-                $w("#repeater1").data = exampleData.splice(0, items[0].qualifications.length - 1);
-                $w("#repeater1").forEachItem(($item, itemData, index) => {
-                    $item("#QualificationItem").text = items[0].qualifications[index]["qualification"];
-                    $item("#QualificationTime").text = items[0].qualifications[index]["howLong"];
+                 $w("#repeater1").data = exampleData.splice(0, items[0].qualifications.length - 1);
+                 $w("#repeater1").forEachItem(($item, itemData, index) => {
+                     $item("#QualificationItem").text = items[0].qualifications[index]["qualification"];
+                     $item("#QualificationTime").text = items[0].qualifications[index]["howLong"];
 
-                });
-
-
+                 });
 
 
 
-            }
-          });
+
+
+             } else {
+                 $w("#text89").text = "Something went wrong with acquiring the vacancy information.";
+                 $w("#text89").show();
+             }
+         })
+        .catch((error) => {
+            let errorMsg = error.message;
+            let code = error.code;
+            console.log(errorMsg);
+            $w("#text89").text = "Something went wrong with acquiring the vacancy information.";
+            $w("#text89").show();
+        });
 
 
 

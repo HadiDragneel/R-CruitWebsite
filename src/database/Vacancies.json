@@ -13,35 +13,16 @@
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
-    "MatchingData": {
-      "displayName": "MatchingData",
-      "sortable": false,
-      "referencedCollection": "MatchingData",
-      "referencingDisplayName": "Vacancy Reference",
-      "isDeleted": false,
-      "systemField": false,
-      "referencingFieldKey": "vacancyReference",
-      "type": "multi-reference",
-      "index": 14
-    },
     "jobQualifications": {
       "displayName": "Job Qualifications",
       "sortable": false,
       "referencedCollection": "JobQualifications",
       "referencingDisplayName": "Vacancies-2",
-      "isDeleted": true,
+      "isDeleted": false,
       "systemField": false,
       "referencingFieldKey": "Vacancies-2",
       "type": "multi-reference",
       "index": 4
-    },
-    "studentsNeeded": {
-      "displayName": "Students Needed",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "number",
-      "index": 10
     },
     "_id": {
       "displayName": "ID",
@@ -59,14 +40,6 @@
       "type": "text",
       "index": 3
     },
-    "jobDescription": {
-      "displayName": "Job Description",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 9
-    },
     "_createdDate": {
       "displayName": "Created Date",
       "sortable": true,
@@ -75,14 +48,6 @@
       "type": "datetime",
       "index": 1
     },
-    "hoursInWeek": {
-      "displayName": "Hours In Week",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 12
-    },
     "_updatedDate": {
       "displayName": "Updated Date",
       "sortable": true,
@@ -90,14 +55,6 @@
       "systemField": true,
       "type": "datetime",
       "index": 2
-    },
-    "qualifications": {
-      "displayName": "Qualifications",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "array",
-      "index": 13
     },
     "Employers-5": {
       "displayName": "Employers-5",
@@ -108,50 +65,7 @@
       "systemField": false,
       "referencingFieldKey": "vacancies",
       "type": "multi-reference",
-      "index": 6
-    },
-    "hourlyWage": {
-      "displayName": "Hourly Wage",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 15
-    },
-    "title": {
-      "displayName": "Job Title",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 7
-    },
-    "CompanyAccountsInfo-1": {
-      "displayName": "CompanyAccountsInfo-1",
-      "sortable": false,
-      "referencedCollection": "CompanyAccountsInfo",
-      "referencingDisplayName": "Vacancies",
-      "isDeleted": false,
-      "systemField": false,
-      "referencingFieldKey": "vacancies",
-      "type": "multi-reference",
       "index": 5
-    },
-    "jobTitle": {
-      "displayName": "Job Title",
-      "sortable": true,
-      "isDeleted": true,
-      "systemField": false,
-      "type": "text",
-      "index": 8
-    },
-    "timeStudentsNeeded": {
-      "displayName": "Time Students Needed",
-      "sortable": true,
-      "isDeleted": false,
-      "systemField": false,
-      "type": "text",
-      "index": 11
     }
   },
   "displayField": "title",

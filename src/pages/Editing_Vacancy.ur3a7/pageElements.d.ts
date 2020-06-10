@@ -1,24 +1,4 @@
 type PageElementsMap = {
-  "#page1": $w.Page;
-  "#text72": $w.Text;
-  "#EditJobTitle": $w.TextInput;
-  "#EditJobDescription": $w.TextBox;
-  "#addQualificationButton": $w.Button;
-  "#removeQualificationButton": $w.Button;
-  "#EditQualificationsRepeater": $w.Repeater;
-  "#container2": $w.Container;
-  "#EditQualification": $w.TextInput;
-  "#EditHowLong": $w.TextInput;
-  "#line1": $w.HiddenCollapsedElement;
-  "#EditAmountStudent": $w.TextInput;
-  "#EditDurationStudent": $w.TextInput;
-  "#EditWeeklyHours": $w.TextInput;
-  "#EditHourlyWage": $w.TextInput;
-  "#changeConfirmation": $w.Button;
-  "#deleteVacancyButton": $w.Button;
-  "#text74": $w.Text;
-  "#text73": $w.Text;
-  "#vectorImage1": $w.VectorImage;
   "#header1": $w.Header;
   "#image2": $w.Image;
   "#horizontalMenu1": $w.Menu;

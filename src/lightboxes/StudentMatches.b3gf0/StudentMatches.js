@@ -27,6 +27,12 @@ async function updateFields(userId) {
                         console.log(results.items.length);
                         if (results.items.length > 0) {
                             let items = results.items;
+
+                            while (items[0].vacancyReference.length > 5) {
+                                items[0].vacancyReference.pop();
+                            }
+
+
                             $w("#repeater1").data = exampleData.slice(0, items[0].vacancyReference.length);
 
                             $w("#repeater1").forEachItem(($item, itemData, index) => {
@@ -36,13 +42,6 @@ async function updateFields(userId) {
 
                             });
 
-
-
-
-
-                            //$w("#text75").text = item.vacancyReference[0].title;
-                            //$w("#text76").text = item.vacancyReference[0].jobDescription;
-                            //console.log(item.vacancyReference[0].title);
                         } else {
                             $w("#repeater1").forEachItem(($item, itemData, index) => {
                                 $item("#text75").text = "No matches yet, please click on 'Update' to generate matches!";
@@ -54,18 +53,23 @@ async function updateFields(userId) {
                         let errorMsg = error.message;
                         let code = error.code;
                         console.log(errorMsg);
+                        $w("#text81").text = "Something went wrong with acquiring the match information.";
+                        $w("#text81").show();
                     });
 
 
 
             } else {
-                console.log("no result 1");
+                $w("#text81").text = "Something went wrong with acquiring the student information.";
+                $w("#text81").show();
             }
         })
         .catch((error) => {
             let errorMsg = error.message;
             let code = error.code;
             console.log(errorMsg);
+            $w("#text81").text = "Something went wrong with acquiring the student information.";
+            $w("#text81").show();
         });
 }
 
@@ -115,8 +119,16 @@ $w.onReady(() => {
 
                     //console.log(results.items[0].experiences[0]["experience"]);
                 } else {
-                    console.log("no resulkt");
+                    $w("#text81").text = "Something went wrong with acquiring the cv information.";
+                    $w("#text81").show();
                 }
+            })
+            .catch((error) => {
+                let errorMsg = error.message;
+                let code = error.code;
+                console.log(errorMsg);
+                $w("#text81").text = "Something went wrong with acquiring the student information.";
+                $w("#text81").show();
             });
     });
 

@@ -5,10 +5,9 @@ import wixData from 'wix-data';
 
 
 $w.onReady(function () {
-
     //Disables the submission button until ToS has been agreed
     $w('#submitButton').disable();
-
+    
     //Check for ToS agreement. Makes submission enabled or disabled based on current checkbox status
     $w('#tosCheck').onChange((event => {
         let isAgreed = $w('#tosCheck').checked;
@@ -20,7 +19,9 @@ $w.onReady(function () {
     }));
 
     $w('#submitButton').onClick(async (event) => {
+
         if ($w('#companyName').valid && $w('#address').valid && $w('#phoneNumber').valid && $w('#email').valid && $w('#password').valid) {
+            $w("#text76").hide();
 
             let email = $w('#email').value;
             let password = $w('#password').value;
@@ -32,7 +33,8 @@ $w.onReady(function () {
             await submitToDatabase(email, companyName, address, phoneNumber);
 
         } else {
-            console.log("Not all fields filled in");
+            $w("#text76").text = "Please fill in all the required fields. (with an *)";
+            $w("#text76").show();
         }
 
     });
@@ -43,14 +45,20 @@ $w.onReady(function () {
             contactInfo: {
                 "firstName": companyName
             }
+        })
+            .catch((err) => {
+            $w("#text76").text = "There was an error creating your account, please try again or contact R'Cruit.";
+            $w("#text76").show();
         });
 
         await wixUsers.login(email, password)
             .then( () => {
                 console.log("[X] User has been logged in.");
+                $w("#text76").hide();
             } )
             .catch( (err) => {
-                console.log(err);
+                $w("#text76").text = "There was an error creating your account, please try again or contact R'Cruit.";
+                $w("#text76").show();
             });
     }
 
@@ -76,16 +84,14 @@ function submitToDatabase(email, companyName, address, phoneNumber) {
         } )
         .catch( (err) => {
             let errorMsg = err;
+            $w("#text76").text = "There was an error creating your account, please try again or contact R'Cruit.";
+            $w("#text76").show();
         } );
 
 
     //Notifies R'Cruit about the new account that was just created
     companyRegistrationEmail(companyName);
     wixLocation.to('/create_vacancy'); // Redirects to create vacancy
-
-
-    // Redirects the user to another specified page
-    wixLocation.to('/home'); // Redirects to home page
 }
 
 function companyRegistrationEmail(name) {
