@@ -26,8 +26,10 @@ $w.onReady(function(){
             $w("#text76").show();
         });
     })
+
+    $w('#ForgotPasswordButton').onClick(function(){
+        wixUsers.promptForgotPassword();
+    })
+
 });
 
-$w('#ForgotPasswordButton').onClick(function(){
-    wixUsers.promptForgotPassword();
-    })

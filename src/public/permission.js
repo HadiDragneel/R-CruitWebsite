@@ -21,7 +21,6 @@ export async function checkIfEmployer (userID) {
         .find()
         .then( (results) => {
             if(results.items.length > 0) {
-                let firstItem = results.items;
                 isEmployer = true;
             }
         } )
@@ -39,7 +38,6 @@ export async function checkIfStudent (userID) {
         .find()
         .then( (results) => {
             if (results.items.length > 0) {
-                let firstItem = results.items;
                 isStudent = true;
             }
         })
